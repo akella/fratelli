@@ -1,0 +1,119 @@
+@import "base";
+//main styles
+//slider
+.cover {
+	position: absolute;
+	top: 101px;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	li {
+		float: left;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}	
+}
+.cover__detail {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+}
+.cover__detail_dark {
+	color: $brown;
+	.cover__title {
+		&:before {
+			@include sized-sprite($icons, ico3);
+		}
+	}
+	.cover__made-title {
+		span {
+			&:before {
+				@include sized-sprite($icons, ico4);
+			}
+			&:after {
+				@include sized-sprite($icons, ico5);
+			}
+		}		
+	}
+}
+.cover__detail_light {
+	color: $light;
+	.cover__title {
+		&:before {
+			@include sized-sprite($icons, ico);
+		}
+	}
+	.cover__made-title {
+		span {
+			&:before {
+				@include sized-sprite($icons, ico1);
+			}
+			&:after {
+				@include sized-sprite($icons, ico2);
+			}
+		}		
+	}
+}
+.cover__title, .cover__date {	
+	font-size: 40px;
+	text-transform: uppercase;
+}
+.cover__title {
+	position: relative;
+	padding-top: 33px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -45px;
+	}
+}
+.cover__date {
+	margin-bottom: 27px;
+}
+.cover__made-title {
+	margin-bottom: 13px;
+	span {
+		position: relative;
+		font-size: 14px;
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			top: 5px;
+		}
+		&:before {
+			left: -24px;
+		}
+		&:after {
+			right: -24px;
+		}
+	}
+}
+.cover__made-person {
+	font-size: 18px;
+	span {
+		margin: 0 5px;
+		font-size: 11px;
+	}
+}
+//cover-nav
+.cover-nav {
+	button {
+		position: absolute;
+		top: 200px;
+		width: 50px;
+		height: 50px;
+		background: red;
+		z-index: 100;
+	}
+}
+.cover-nav__prev {
+	left: 50px;
+}
+.cover-nav__next {
+	right: 50px;
+}

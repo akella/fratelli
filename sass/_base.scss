@@ -1,0 +1,21 @@
+@import "lib/base";
+@import "lib/animations";
+@import "lib/keyframes";
+//variables
+$dark: #c3c2b7;
+$light: #f9f6e6;
+$brown: #4b412c;
+$yellow: #e3dbb2;
+// gradients for ie
+$experimental-support-for-svg: true;
+// global sprites
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+//extend
+%block {
+	
+}		
+//fonts
+@font-face {
+	font-family: 'futuris';
+	src: url('../fonts/futuris.ttf');
+}

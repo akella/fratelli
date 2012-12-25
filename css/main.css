@@ -1,0 +1,38 @@
+@font-face { font-family: 'futuris'; src: url("../fonts/futuris.ttf"); }
+
+.cover { position: absolute; top: 101px; left: 0; right: 0; bottom: 20px; }
+.cover li { float: left; position: relative; background-size: cover; background-repeat: no-repeat; background-position: 0 0; }
+
+.cover__detail { position: absolute; top: 50%; left: 50%; text-align: center; }
+
+.cover__detail_dark { color: #4b412c; }
+.cover__detail_dark .cover__title:before { background: url('../img/icons-s19bf62a649.png') 0 -80px no-repeat; width: 91px; height: 16px; }
+.cover__detail_dark .cover__made-title span:before { background: url('../img/icons-s19bf62a649.png') 0 -284px no-repeat; width: 16px; height: 6px; }
+.cover__detail_dark .cover__made-title span:after { background: url('../img/icons-s19bf62a649.png') 0 -252px no-repeat; width: 16px; height: 6px; }
+
+.cover__detail_light { color: #f9f6e6; }
+.cover__detail_light .cover__title:before { background: url('../img/icons-s19bf62a649.png') 0 -106px no-repeat; width: 91px; height: 16px; }
+.cover__detail_light .cover__made-title span:before { background: url('../img/icons-s19bf62a649.png') 0 -268px no-repeat; width: 16px; height: 6px; }
+.cover__detail_light .cover__made-title span:after { background: url('../img/icons-s19bf62a649.png') 0 -236px no-repeat; width: 16px; height: 6px; }
+
+.cover__title, .cover__date { font-size: 40px; text-transform: uppercase; }
+
+.cover__title { position: relative; padding-top: 33px; }
+.cover__title:before { content: ""; position: absolute; top: 0; left: 50%; margin-left: -45px; }
+
+.cover__date { margin-bottom: 27px; }
+
+.cover__made-title { margin-bottom: 13px; }
+.cover__made-title span { position: relative; font-size: 14px; }
+.cover__made-title span:before, .cover__made-title span:after { content: ""; position: absolute; top: 5px; }
+.cover__made-title span:before { left: -24px; }
+.cover__made-title span:after { right: -24px; }
+
+.cover__made-person { font-size: 18px; }
+.cover__made-person span { margin: 0 5px; font-size: 11px; }
+
+.cover-nav button { position: absolute; top: 200px; width: 50px; height: 50px; background: red; z-index: 100; }
+
+.cover-nav__prev { left: 50px; }
+
+.cover-nav__next { right: 50px; }
