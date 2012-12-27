@@ -2,11 +2,11 @@
 
 @font-face { font-family: 'futuris'; src: url("../fonts/futuris.ttf"); }
 
-* { margin: 0; padding: 0; -webkit-text-size-adjust: none; }
+* { margin: 0; padding: 0; }
 
 html, body { height: 100%; }
 
-body { overflow: hidden; -webkit-transform: translate3d(0, 0, 0); -weblit-backface-visibility: hidden; font-family: 'futuris', Arial, sans-serif; font-weight: normal; font-size: 11px; }
+body { overflow: hidden; font-family: 'futuris', Arial, sans-serif; font-weight: normal; font-size: 11px; }
 
 header, footer, nav, section, aside { display: block; }
 
@@ -27,21 +27,45 @@ table { border-spacing: 0; border-collapse: collapse; }
 .logo { position: absolute; top: 0; left: 50%; margin-left: -130px; background: url('../img/icons-s19bf62a649.png') 0 0 no-repeat; width: 260px; height: 70px; }
 .logo a { display: block; width: 260px; height: 70px; }
 
-.nav { position: absolute; top: 70px; left: 0; width: 100%; height: 31px; background: url(../img/icons/nav-bg.png) repeat-x; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; text-align: center; overflow: hidden; z-index: 10; }
+.nav { position: absolute; top: 70px; left: 0; width: 100%; height: 31px; background: url(../img/icons/nav-bg.png) repeat-x; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; text-align: center; text-transform: uppercase; overflow: hidden; z-index: 10; }
 .nav ul { text-align: center; }
 .nav li { display: inline-block; }
-.nav li a { display: block; height: 31px; padding: 0 15px; line-height: 31px; font-size: 14px; color: #c3c2b7; text-transform: uppercase; }
+.nav li a { display: block; height: 31px; padding: 0 15px; line-height: 31px; font-size: 14px; color: #c3c2b7; }
 .nav li a:hover { color: #f9f6e6; }
 .nav li a.active { background: #f9f6e6; color: #4b412c; cursor: default; }
-.nav .nav__select { float: left; height: 31px; line-height: 31px; margin-left: 20px; font-size: 11px; text-transform: uppercase; color: #c3c2b7; }
-.nav .nav__select span { position: relative; padding: 0 8px 0 7px; text-decoration: underline; cursor: pointer; }
-.nav .nav__select i { position: absolute; top: 5px; right: 0; background: url('../img/icons-s19bf62a649.png') 0 -456px no-repeat; width: 5px; height: 4px; }
-.nav .nav__whats-new { float: right; }
-.nav .nav__whats-new a { background: #e3dbb2; color: #000; }
-.nav .nav__whats-new a:hover { background: #f9f6e6; color: #000; }
+
+.nav__select { float: left; height: 31px; line-height: 31px; margin-left: 20px; font-size: 11px; color: #c3c2b7; }
+.nav__select span { position: relative; padding: 0 8px 0 7px; text-decoration: underline; cursor: pointer; }
+.nav__select i { position: absolute; top: 5px; right: 0; background: url('../img/icons-s19bf62a649.png') 0 -456px no-repeat; width: 5px; height: 4px; }
+
+.nav__new { float: right; }
+.nav__new a { display: block; height: 31px; line-height: 31px; padding: 0 15px; background: #e3dbb2; font-size: 14px; color: #000; }
+.nav__new a:hover { background: #f9f6e6; color: #000; }
+
+.nav__new_is a { -webkit-animation: flashing 3s linear infinite; -moz-animation: flashing 3s linear infinite; -ms-animation: flashing 3s linear infinite; -o-animation: flashing 3s linear infinite; animation: flashing 3s linear infinite; }
+
+@-moz-keyframes flashing { 0% { background: #e3dbb2; color: #4b412c; }
+  50% { background: #4b412c; color: #e3dbb2; }
+  100% { background: #e3dbb2; color: #4b412c; } }
+
+@-webkit-keyframes flashing { 0% { background: #e3dbb2; color: #4b412c; }
+  50% { background: #4b412c; color: #e3dbb2; }
+  100% { background: #e3dbb2; color: #4b412c; } }
+
+@-o-keyframes flashing { 0% { background: #e3dbb2; color: #4b412c; }
+  50% { background: #4b412c; color: #e3dbb2; }
+  100% { background: #e3dbb2; color: #4b412c; } }
+
+@-ms-keyframes flashing { 0% { background: #e3dbb2; color: #4b412c; }
+  50% { background: #4b412c; color: #e3dbb2; }
+  100% { background: #e3dbb2; color: #4b412c; } }
+
+@keyframes flashing { 0% { background: #e3dbb2; color: #4b412c; }
+  50% { background: #4b412c; color: #e3dbb2; }
+  100% { background: #e3dbb2; color: #4b412c; } }
 
 .footer { position: absolute; left: 0; bottom: 0; width: 100%; height: 20px; background: url(../img/icons/nav-bg.png) repeat-x; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.5) 0 0 2px; z-index: 10; }
-.footer ul { overflow: hidden; text-align: center; }
+.footer ul { text-align: center; }
 .footer li { display: inline-block; }
 .footer a, .footer button { position: relative; display: block; height: 20px; padding-left: 20px; line-height: 20px; font-size: 11px; color: #c3c2b7; text-transform: uppercase; }
 .footer a:hover, .footer button:hover { color: #f9f6e6; }

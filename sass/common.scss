@@ -1,12 +1,16 @@
 @import "base";
-* { margin:0; padding:0; -webkit-text-size-adjust: none; }
+* { 
+	margin:0; 
+	padding:0; 
+	//-webkit-text-size-adjust: none; 
+}
 html, body {
 	height: 100%;
 }
 body {		
 	overflow: hidden;
-	-webkit-transform: translate3d(0,0,0);
-	-weblit-backface-visibility: hidden;
+	//-webkit-transform: translate3d(0,0,0);
+	//-weblit-backface-visibility: hidden;
 	font: {
 	  family: 'futuris', Arial, sans-serif;
 	  weight: normal;
@@ -78,6 +82,7 @@ table {
 	background: url(../img/icons/nav-bg.png) repeat-x;
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	text-align: center;
+	text-transform: uppercase;
 	overflow: hidden;
 	z-index: 10;
 	ul {
@@ -92,7 +97,6 @@ table {
 			line-height: 31px;
 			font-size: 14px;
 			color: $dark;
-			text-transform: uppercase;
 			&:hover {
 				color: $light;
 			}
@@ -102,42 +106,62 @@ table {
 				cursor: default;
 			}
 		}
+	}	
+}
+.nav__select {
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	margin-left: 20px;
+	font-size: 11px;	
+	color: $dark;
+	span {
+		position: relative;
+		padding: 0 8px 0 7px;
+		text-decoration: underline;
+		cursor: pointer;
 	}
-	.nav__select {
-		float: left;
+	i {
+		position: absolute;
+		top: 5px;
+		right: 0;
+		@include sized-sprite($icons, arr);
+	}
+}
+.nav__new {
+	float: right;	
+	a {
+		display: block;
 		height: 31px;
 		line-height: 31px;
-		margin-left: 20px;
-		font-size: 11px;
-		text-transform: uppercase;
-		color: $dark;
-		span {
-			position: relative;
-			padding: 0 8px 0 7px;
-			text-decoration: underline;
-			cursor: pointer;
-		}
-		i {
-			position: absolute;
-			top: 5px;
-			right: 0;
-			@include sized-sprite($icons, arr);
-		}
-	}
-	.nav__whats-new {
-		float: right;		
-		a {
-			background: $yellow;
+		padding: 0 15px;
+		background: $yellow;
+		font-size: 14px;
+		color: #000;		
+		&:hover {
+			background: $light;
 			color: #000;
-			&:hover {
-				background: $light;
-				color: #000;
-			}
-		}		
+		}
+	}		
+}
+.nav__new_is {
+	a {
+		@include animation(flashing 3s linear infinite);
+	}	
+}
+@include keyframes(flashing) {
+	0% {
+		background: $yellow;
+		color: $brown;
+	}	
+	50% {
+		background: $brown;
+		color: $yellow;
 	}
-	.nav__whats-new_active {
-		
-	}
+	100% {
+		background: $yellow;
+		color: $brown;
+	}	
 }
 //footer
 .footer {
@@ -150,7 +174,6 @@ table {
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	z-index: 10;
 	ul {
-		overflow: hidden;
 		text-align: center;
 	}	
 	li {
