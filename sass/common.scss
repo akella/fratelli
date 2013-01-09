@@ -8,7 +8,7 @@ html, body {
 	height: 100%;
 }
 body {		
-	overflow: hidden;
+	background: $light;
 	//-webkit-transform: translate3d(0,0,0);
 	//-weblit-backface-visibility: hidden;
 	font: {
@@ -46,7 +46,12 @@ table {
 	border-collapse: collapse;
 }
 // common styles
-
+//container
+.container {
+	width: 960px;
+	margin: 0 auto;
+	padding: 101px 0 20px 0; 
+}
 //header
 .header {
 	position: absolute;
@@ -130,37 +135,29 @@ table {
 }
 .nav__new {
 	float: right;	
-	a {
-		display: block;
-		height: 31px;
-		line-height: 31px;
-		padding: 0 15px;
-		background: $yellow;
-		font-size: 14px;
-		color: #000;		
-		&:hover {
-			background: $light;
-			color: #000;
-		}
-	}		
+	height: 31px;
+	line-height: 31px;
+	padding: 0 15px;
+	background: $yellow;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #000;		
 }
 .nav__new_is {
-	a {
-		@include animation(flashing 3s linear infinite);
-	}	
+	@include animation(flashing 2s linear infinite);
 }
 @include keyframes(flashing) {
 	0% {
-		background: $yellow;
-		color: $brown;
+		background: #fff;
+		color: #000;
 	}	
 	50% {
-		background: $brown;
-		color: $yellow;
+		background: #808080;
+		color: #000;
 	}
 	100% {
-		background: $yellow;
-		color: $brown;
+		background: #fff;
+		color: #000;
 	}	
 }
 //footer

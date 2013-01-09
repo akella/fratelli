@@ -7,10 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link rel="stylesheet" media="screen" href="css/screen.css">	
+	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
-	<script src="js/jquery.carouFredSel.js"></script>	
+	<script src="js/jquery.cycle.js"></script>	
+	<script src="js/jquery.mousewheel.js"></script>	
+	<script src="js/jquery.jscrollpane.js"></script>	
+	<script src="js/jquery.masonry.min.js"></script>	
 	<script src="js/jquery.easing.1.3.js"></script>	
 	<script src="js/common.js"></script>
 </head>
@@ -25,7 +29,7 @@
 <!-- BEGIN .nav -->
 <nav class="nav">
 	<div class="nav__select">Language:<span>ITaliano<i></i></span></div>
-	<div class="nav__new nav__new_is"><a href="#">what's new!</a></div>
+	<button class="nav__new nav__new_is">what's new!</button>
 	<ul>		
 		<li><a href="#">Store</a></li>
 		<li><a href="#">Collection</a></li>
@@ -36,39 +40,202 @@
 </nav>
 <!-- END .nav -->
 <!-- BEGIN .cover -->
-<ul class="cover">
-	<li style="background-image: url(img/pic1.jpg);">
-		<a class="cover__detail cover__detail_dark" href="#">
-			<div class="cover__title">NEW COLLECTION</div>
-			<div class="cover__date">2012/13</div>
-			<div class="cover__made-title"><span>Made with</span></div>
-			<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
-		</a>
-	</li>
-	<li style="background-image: url(img/pic2.jpg);">
-		<a class="cover__detail cover__detail_light" href="#">
-			<div class="cover__title">NEW COLLECTION</div>
-			<div class="cover__date">2012/13</div>
-			<div class="cover__made-title"><span>Made with</span></div>
-			<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
-		</a>
-	</li>
-	<li style="background-image: url(img/pic3.jpg);">
-		<a class="cover__detail cover__detail_light" href="#">
-			<div class="cover__title">NEW COLLECTION</div>
-			<div class="cover__date">2012/13</div>
-			<div class="cover__made-title"><span>Made with</span></div>
-			<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
-		</a>
-	</li>
-</ul>
+<div class="cover">
+	<div class="cover__video">
+		<a href="#"><img src="img/pic6.jpg"><i></i></a>
+	</div>
+	<ul>
+		<li style="background-image: url(img/pic1.jpg);">
+			<a class="cover__detail cover__detail_dark" href="#">
+				<div class="cover__title">NEW COLLECTION</div>
+				<div class="cover__date">2012/13</div>
+				<div class="cover__made-title"><span>Made with</span></div>
+				<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
+			</a>
+		</li>
+		<li style="background-image: url(img/pic2.jpg);">
+			<a class="cover__detail cover__detail_light" href="#">
+				<div class="cover__title">NEW COLLECTION</div>
+				<div class="cover__date">2012/13</div>
+				<div class="cover__made-title"><span>Made with</span></div>
+				<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
+			</a>
+		</li>
+		<li style="background-image: url(img/pic3.jpg);">
+			<a class="cover__detail cover__detail_light" href="#">
+				<div class="cover__title">NEW COLLECTION</div>
+				<div class="cover__date">2012/13</div>
+				<div class="cover__made-title"><span>Made with</span></div>
+				<div class="cover__made-person">Beaver<span>•</span>Fox<span>•</span>Marten</div>
+			</a>
+		</li>
+	</ul>
+</div>
 <!-- END .cover -->
+
+<!-- BEGIN .news -->
+<section class="news">
+	<div class="news__wrap"> 
+		<button class="news__close"></button>	
+		<div class="news__list"> 	
+			<ul>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic4.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+				<li>
+					<div class="news__pic">
+						<a href="#"><img src="img/pic5.jpg"></a>
+					</div>
+					<div class="news__cat">
+						<a href="#">Campaign</a>
+					</div>	
+					<div class="news__desc">
+						 <a href="#">Leonard Print</a>
+						 <p>Animal fever is rising again as a key trend for the fall-winter season. Leopard prints are everywhere to be seen - on trousers, skirts, dresses and accessories.</p>
+					</div>	
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- END .news -->
+
 <!-- BEGIN .cover-nav -->
 <!--<div class="cover-nav">
 	<button class="cover-nav__prev"></button>
 	<button class="cover-nav__next"></button>
 </div>--!>
 <!-- END .cover-nav -->
+
 <!-- BEGIN .footer -->
 <footer class="footer">
 	<div class="footer__play"><button>play<i></i></button></div>

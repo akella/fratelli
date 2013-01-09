@@ -1,2 +1,123 @@
 @import "base";
 //styles for inner pages
+.news {
+	display: none;
+	position: absolute;
+	top: 101px;
+	left: 0;
+	background: $yellow;
+	overflow: hidden;
+	z-index: 100;	
+}
+.news__wrap {
+	position: relative;
+	padding: 20px 0 0 20px;
+}
+.news__close {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	@include sized-sprite($icons, news-close);
+	z-index: 10;
+}
+.news__list {
+	position: relative;
+	overflow: auto;
+	outline: none;
+	li {
+		display: inline-block;
+		width: 230px;
+		margin: 0 20px 20px 0;
+		border-bottom: 1px dotted #968e77;
+		font-family: Arial, Tahoma, sans-serif;
+		font-size: 0;
+	}
+}
+.news__pic {
+	margin-bottom: 5px;
+	img {
+		display: block;
+	}
+}
+.news__cat {
+	margin-bottom: 2px;
+	a {
+		font-size: 12px;
+		color: $gray;
+		text-transform: uppercase;
+	}
+}
+.news__desc {
+	a {
+		font-size: 18px;
+		color: #000;
+		text-transform: uppercase;
+	}
+	p {
+		padding: 5px 0 20px 0;
+		margin-left: 1px;
+		border-bottom: 1px dotted #968e77;
+		font-size: 12px;
+		color: $gray1;
+	}
+}
+//news scroll
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+.jspPane {
+	position: absolute;
+}
+.jspVerticalBar {
+	position: absolute;
+	top: 17px;
+	right: 5px;
+	width: 12px;
+	height: 100%;
+	background: red;
+}
+.jspCap	{
+	display: none;
+}
+.jspTrack {
+	background: #d5cda8;
+	position: relative;
+}
+.jspDrag {
+	background: #b9b192;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.jspDragTop {
+	position: absolute;
+	top: 50%;
+	left: 2px;
+	margin-top: -2px;
+	@include sized-sprite($icons, scroll);
+}
+//art director
+.director {
+	overflow: hidden;
+	img {
+		float: left;
+		margin-right: 20px;
+	}
+	p {
+		font-family: Arial, Tahoma, sans-serif;
+		font-size: 13px;
+		text-align: justify;
+		color: #000;
+	}
+}
+.director__title {
+	color: $brown;
+	.h1 {
+		font-size: 40px;		
+	}
+	span {
+		font-size: 18px;
+	}
+}

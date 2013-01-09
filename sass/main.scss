@@ -15,6 +15,24 @@
 		background-position: 0 0;
 	}	
 }
+.cover__video {
+	position: absolute;
+	left: 100px;
+	bottom: 70px;
+	border: 2px solid #fff;
+	@include box-shadow(rgba(0,0,0,0.4) 0 5px 10px);
+	z-index: 10;
+	img {
+		display: block;
+	}
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -22px 0 0 -22px;
+		@include sized-sprite($icons, play-gal);
+	}
+}
 .cover__detail {
 	position: absolute;
 	top: 50%;
