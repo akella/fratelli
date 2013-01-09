@@ -12,7 +12,7 @@ body {
 	//-webkit-transform: translate3d(0,0,0);
 	//-weblit-backface-visibility: hidden;
 	font: {
-	  family: 'futuris', Arial, sans-serif;
+	  family: Arial, Tahoma, sans-serif;
 	  weight: normal;
 	  size: 11px;
 	}
@@ -46,17 +46,82 @@ table {
 	border-collapse: collapse;
 }
 // common styles
+//btn
+.btn {
+	text-align: center;
+	input {
+		display: inline-block;
+		height: 21px;
+		padding: 0 10px;
+		border: 1px solid $brown;
+		background: none;
+		color: $brown;
+		font-size: 11px;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:hover {
+			border-color: $brown1;
+			color: $brown1;
+		}
+		&:active {
+			border-color: $brown;
+			background: $brown;
+			color: #f9f6e6;
+		}
+	}
+}
+//checkbox
+.checkbox {
+	position: relative;
+	height: 18px;
+	padding-left: 27px;
+	margin-bottom: 15px;
+	line-height: 18px;
+	font-size: 11px;
+	color: $gray;
+	a {
+		text-decoration: underline;
+		color: $gray;
+	}
+	input[type="checkbox"], i {
+		position: absolute;
+		top: 0;
+		left: 7px;
+		width: 14px;
+		height: 17px;
+	}
+	input[type="checkbox"] {
+		z-index: 10;
+		opacity: 0;
+	}
+	input[type="checkbox"]:checked + i  	{
+		@include sized-sprite($icons, check1);
+	}
+	i {
+		@include sized-sprite($icons, check);
+	}
+}
+//wrap
+.wrap {
+	position: relative;
+	margin-bottom: -20px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+//push
+.push {
+	height: 20px;
+	clear: both;
+}
 //container
 .container {
 	width: 960px;
 	margin: 0 auto;
-	padding: 101px 0 20px 0; 
 }
 //header
 .header {
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
 	width: 100%;
 	height: 70px;
 	background: #36312c;
@@ -79,16 +144,13 @@ table {
 }
 //nav
 .nav {
-	position: absolute;
-	top: 70px;
-	left: 0;
+	position: relative;
 	width: 100%;
 	height: 31px;
-	background: url(../img/icons/nav-bg.png) repeat-x;
+	background: url(../img/icons/nav-bg.png);
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	text-align: center;
 	text-transform: uppercase;
-	overflow: hidden;
 	z-index: 10;
 	ul {
 		text-align: center;
@@ -100,6 +162,7 @@ table {
 			height: 31px;
 			padding: 0 15px;
 			line-height: 31px;
+			font-family: 'Futuris', Arial, sans-serif;
 			font-size: 14px;
 			color: $dark;
 			&:hover {
@@ -114,10 +177,12 @@ table {
 	}	
 }
 .nav__select {
+	position: relative;
 	float: left;
 	height: 31px;
 	line-height: 31px;
 	margin-left: 20px;
+	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 11px;	
 	color: $dark;
 	span {
@@ -125,12 +190,36 @@ table {
 		padding: 0 8px 0 7px;
 		text-decoration: underline;
 		cursor: pointer;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 3px;
+			right: 0;
+			@include sized-sprite($icons, arr);
+		}
+		&.open {
+			&:after {
+				@include sized-sprite($icons, arr1);
+			}
+		}
 	}
-	i {
+	ul {
+		display: none;
 		position: absolute;
-		top: 5px;
-		right: 0;
-		@include sized-sprite($icons, arr);
+		top: 31px;
+		left: 57px;
+		background: url(../img/icons/nav-bg.png);
+		line-height: 20px;
+	}
+	li {
+		display: block;
+		padding: 0 10px;
+		text-align: left;
+		white-space: nowrap;
+		cursor: pointer;
+		&:hover {
+			color: $light;
+		}
 	}
 }
 .nav__new {
@@ -139,6 +228,7 @@ table {
 	line-height: 31px;
 	padding: 0 15px;
 	background: $yellow;
+	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #000;		
@@ -162,12 +252,10 @@ table {
 }
 //footer
 .footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
+	position: relative;
 	width: 100%;
 	height: 20px;
-	background: url(../img/icons/nav-bg.png) repeat-x;
+	background: url(../img/icons/nav-bg.png);
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	z-index: 10;
 	ul {
@@ -181,7 +269,8 @@ table {
 		display: block;
 		height: 20px;
 		padding-left: 20px;
-		line-height: 20px;		
+		line-height: 22px;	
+		font-family: 'Futuris', Arial, sans-serif;	
 		font-size: 11px;
 		color: $dark;
 		text-transform: uppercase;
@@ -198,6 +287,9 @@ table {
 .footer__play {
 	float: left;
 	margin: 0 20px 0 8px;
+	button {
+		font-family: 'Futuris', Arial, sans-serif;
+	}	
 	i {
 		top: 1px;
 		@include sized-sprite($icons, play);

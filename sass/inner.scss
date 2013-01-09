@@ -29,7 +29,6 @@
 		width: 230px;
 		margin: 0 20px 20px 0;
 		border-bottom: 1px dotted #968e77;
-		font-family: Arial, Tahoma, sans-serif;
 		font-size: 0;
 	}
 }
@@ -98,6 +97,240 @@
 	margin-top: -2px;
 	@include sized-sprite($icons, scroll);
 }
+//tabs
+.tabs {
+	padding-top: 50px;		
+}
+.tabs__menu {
+	padding-bottom: 7px;
+	border-bottom: 1px dotted $brown;
+	text-align: center;
+	font-size: 0;
+	li {
+		display: inline-block;
+		height: 21px;
+		line-height: 21px;
+		padding: 0 13px;
+		border: 1px solid $light;
+		@include border-radius(1px);
+		font-size: 11px;
+		color: $brown;
+		text-transform: uppercase;
+		cursor: pointer;
+		&.active {
+			border-color: $brown;
+			cursor: default;
+		}
+	}
+}
+.tabs__nav {
+	padding: 12px 0 50px 0;
+	border-top: 1px dotted $brown;
+	overflow: hidden;	
+}
+.tabs__prev, .tabs__next {
+	position: relative;
+	cursor: pointer;
+	color: $gray;
+	&:hover {
+		text-decoration: underline;
+	}
+	&:active {
+		color: #000;
+		text-decoration: none;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+	}
+	&.disabled {
+		display: none;
+	}
+}
+.tabs__prev {
+	float: left;
+	padding-left: 18px;
+	&:before {
+		left: 9px;
+		@include sized-sprite($icons, prev);
+	}
+}
+.tabs__next {
+	float: right;
+	padding-right: 18px;
+	&:before {
+		right: 9px;
+		@include sized-sprite($icons, next);
+	}
+}
+.tabs__content {
+	position: relative;
+	width: 960px;
+	height: 387px;
+	padding: 15px 0;
+	margin-left: 1px;
+	border-top: 1px dotted $brown;
+	border-bottom: 1px dotted $brown;
+	overflow: hidden;
+}
+.tabs__groups {
+	position: absolute;
+	width: 2000em;
+}
+.tabs__item {
+	float: left;
+	height: 387px;
+}
+//contacts
+.tabs__adress {
+	width: 960px;
+	span {
+		display: block;
+		text-align: center;
+		font-size: 13px;
+		color: #000;
+	}
+}
+.tabs__map {
+	width: 720px;
+	margin: 10px 0 0 119px;
+	border: 1px solid #c3c3bf;
+	img {
+		display: block;
+	}
+}
+.tabs__contacts {
+	width: 960px;
+	overflow: hidden;
+	form {
+		float: right;
+		width: 342px;
+		padding: 0 68px 0 70px;
+		border-left: 1px solid #ccc8bb;
+		p {
+			padding: 0 0 11px 9px;
+			font-size: 13px;
+			color: #000;
+		}
+	}
+}
+.tabs__phones {
+	float: left;
+	padding-left: 110px;
+	p {
+		font-size: 13px;
+		font-weight: bold;
+	}
+	img {
+		margin: 15px 0 10px -40px;
+	}
+	dl {
+		text-transform: uppercase;
+	}
+	dt {
+		height: 25px;
+		line-height: 25px;
+		cursor: pointer;
+		&.active {
+			span {
+				&:after {
+					top: 6px;
+				@include sized-sprite($icons, acc2);
+			}
+			}
+		}
+	}
+	span {
+		position: relative;		
+		padding-right: 10px;		
+		font-size: 13px;
+		font-weight: bold;
+		color: $brown;		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			right: 0;
+			@include sized-sprite($icons, acc1);
+		}
+	}
+	dd {
+		display: none;
+	}
+	dd, a {		
+		font-family: 'Futuris', Arial, sans-serif;
+		font-size: 24px;
+		color: #000;
+		font-weight: bold;
+	}
+}
+//txt-field
+.txt-field, .txt-area {
+	width: 324px;
+	height: 20px;
+	padding: 0 8px;	
+	margin-bottom: 6px;
+	border: 1px solid #c0beb3;
+	background: #fff;
+	font-size: 11px;
+	&::-webkit-input-placeholder {
+	  color: $gray;
+	}
+	&:-moz-placeholder {
+		color: $gray;
+	}
+}
+.txt-area {
+	height: 100px;
+	padding: 4px 8px;
+}
+.txt-field_select {
+	position: relative;
+	width: 340px;
+	padding: 0;
+	line-height: 20px;
+	span {
+		position: relative;
+		display: block;
+		padding: 0 8px;
+		font-size: 11px;
+		color: $gray;
+		cursor: pointer;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 8px;
+			right: 7px;
+			@include sized-sprite($icons, acc2);
+		}
+		&.open {
+			&:after {
+				@include sized-sprite($icons, acc3);
+			}
+		}
+	}
+	ul {
+		display: none;
+		position: absolute;
+		top: 20px;
+		left: -1px;
+		width: 340px;		
+		border: 1px solid #c0beb3;
+		border-width: 0 1px 1px 1px;
+		background: #fff;
+		font-size: 11px;
+	}
+	li {
+		padding: 0 8px;	
+		cursor: pointer;
+		color: $gray;
+		&:hover {
+			background: $yellow;
+			color: $brown;
+		}
+	}
+}
 //art director
 .director {
 	overflow: hidden;
@@ -106,18 +339,21 @@
 		margin-right: 20px;
 	}
 	p {
-		font-family: Arial, Tahoma, sans-serif;
 		font-size: 13px;
 		text-align: justify;
 		color: #000;
 	}
 }
 .director__title {
+	margin-bottom: 15px;
+	font-family: 'Futuris', Arial, sans-serif;
 	color: $brown;
 	.h1 {
+		padding: 17px 0 5px 0;
 		font-size: 40px;		
 	}
 	span {
 		font-size: 18px;
 	}
 }
+

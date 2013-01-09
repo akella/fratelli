@@ -11,3 +11,12 @@
 	float: right;
 	width: 225px;
 }
+//2 cols
+.txt2 {
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;	
+	column-count: 2;
+	column-gap: 20px;
+}

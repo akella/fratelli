@@ -5,6 +5,7 @@
 $dark: #c3c2b7;
 $light: #f9f6e6;
 $brown: #4b412c;
+$brown1: #8e8165;
 $yellow: #e3dbb2;
 $gray: #888780;
 $gray1: #5b5b56;
@@ -18,7 +19,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 }		
 //fonts
 @font-face {
-	font-family: 'futuris';
-	src: url('../fonts/futuris.ttf');
+	font-family: 'Futuris';
+	src: url('../fonts/Futuris-Cyrillic.woff');
 }
 

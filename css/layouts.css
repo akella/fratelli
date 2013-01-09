@@ -1,4 +1,4 @@
-@font-face { font-family: 'futuris'; src: url("../fonts/futuris.ttf"); }
+@font-face { font-family: 'Futuris'; src: url("../fonts/Futuris-Cyrillic.woff"); }
 
 /*styles for layouts*/
 .cols { overflow: hidden; }
@@ -6,3 +6,5 @@
 .col-1 { float: left; width: 225px; }
 
 .col-2 { float: right; width: 225px; }
+
+.txt2 { -webkit-column-count: 2; -webkit-column-gap: 20px; -moz-column-count: 2; -moz-column-gap: 20px; column-count: 2; column-gap: 20px; }

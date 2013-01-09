@@ -2,11 +2,7 @@
 //main styles
 //slider
 .cover {
-	position: absolute;
-	top: 101px;
-	left: 0;
-	right: 0;
-	bottom: 20px;
+	position: relative;
 	li {
 		float: left;
 		position: relative;
@@ -38,6 +34,7 @@
 	top: 50%;
 	left: 50%;
 	text-align: center;
+	font-family: 'Futuris', Arial, sans-serif;
 }
 .cover__detail_dark {
 	color: $brown;
@@ -117,21 +114,4 @@
 		margin: 0 5px;
 		font-size: 11px;
 	}
-}
-//cover-nav
-.cover-nav {
-	button {
-		position: absolute;
-		top: 200px;
-		width: 50px;
-		height: 50px;
-		background: red;
-		z-index: 100;
-	}
-}
-.cover-nav__prev {
-	left: 50px;
-}
-.cover-nav__next {
-	right: 50px;
 }

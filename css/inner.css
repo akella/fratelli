@@ -1,13 +1,13 @@
-@font-face { font-family: 'futuris'; src: url("../fonts/futuris.ttf"); }
+@font-face { font-family: 'Futuris'; src: url("../fonts/Futuris-Cyrillic.woff"); }
 
 .news { display: none; position: absolute; top: 101px; left: 0; background: #e3dbb2; overflow: hidden; z-index: 100; }
 
 .news__wrap { position: relative; padding: 20px 0 0 20px; }
 
-.news__close { position: absolute; top: 20px; right: 5px; background: url('../img/icons-s6f1b549caa.png') 0 -406px no-repeat; width: 12px; height: 12px; z-index: 10; }
+.news__close { position: absolute; top: 20px; right: 5px; background: url('../img/icons-sed92e16a89.png') 0 -472px no-repeat; width: 12px; height: 12px; z-index: 10; }
 
 .news__list { position: relative; overflow: auto; outline: none; }
-.news__list li { display: inline-block; width: 230px; margin: 0 20px 20px 0; border-bottom: 1px dotted #968e77; font-family: Arial, Tahoma, sans-serif; font-size: 0; }
+.news__list li { display: inline-block; width: 230px; margin: 0 20px 20px 0; border-bottom: 1px dotted #968e77; font-size: 0; }
 
 .news__pic { margin-bottom: 5px; }
 .news__pic img { display: block; }
@@ -30,12 +30,73 @@
 
 .jspDrag { background: #b9b192; position: relative; top: 0; left: 0; cursor: pointer; }
 
-.jspDragTop { position: absolute; top: 50%; left: 2px; margin-top: -2px; background: url('../img/icons-s6f1b549caa.png') 0 -587px no-repeat; width: 8px; height: 5px; }
+.jspDragTop { position: absolute; top: 50%; left: 2px; margin-top: -2px; background: url('../img/icons-sed92e16a89.png') 0 -699px no-repeat; width: 8px; height: 5px; }
+
+.tabs { padding-top: 50px; }
+
+.tabs__menu { padding-bottom: 7px; border-bottom: 1px dotted #4b412c; text-align: center; font-size: 0; }
+.tabs__menu li { display: inline-block; height: 21px; line-height: 21px; padding: 0 13px; border: 1px solid #f9f6e6; -webkit-border-radius: 1px; -moz-border-radius: 1px; -ms-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; font-size: 11px; color: #4b412c; text-transform: uppercase; cursor: pointer; }
+.tabs__menu li.active { border-color: #4b412c; cursor: default; }
+
+.tabs__nav { padding: 12px 0 50px 0; border-top: 1px dotted #4b412c; overflow: hidden; }
+
+.tabs__prev, .tabs__next { position: relative; cursor: pointer; color: #888780; }
+.tabs__prev:hover, .tabs__next:hover { text-decoration: underline; }
+.tabs__prev:active, .tabs__next:active { color: #000; text-decoration: none; }
+.tabs__prev:before, .tabs__next:before { content: ""; position: absolute; top: 4px; }
+.tabs__prev.disabled, .tabs__next.disabled { display: none; }
+
+.tabs__prev { float: left; padding-left: 18px; }
+.tabs__prev:before { left: 9px; background: url('../img/icons-sed92e16a89.png') 0 -656px no-repeat; width: 4px; height: 5px; }
+
+.tabs__next { float: right; padding-right: 18px; }
+.tabs__next:before { right: 9px; background: url('../img/icons-sed92e16a89.png') 0 -598px no-repeat; width: 4px; height: 5px; }
+
+.tabs__content { position: relative; width: 960px; height: 387px; padding: 15px 0; margin-left: 1px; border-top: 1px dotted #4b412c; border-bottom: 1px dotted #4b412c; overflow: hidden; }
+
+.tabs__groups { position: absolute; width: 2000em; }
+
+.tabs__item { float: left; height: 387px; }
+
+.tabs__adress { width: 960px; }
+.tabs__adress span { display: block; text-align: center; font-size: 13px; color: #000; }
+
+.tabs__map { width: 720px; margin: 10px 0 0 119px; border: 1px solid #c3c3bf; }
+.tabs__map img { display: block; }
+
+.tabs__contacts { width: 960px; overflow: hidden; }
+.tabs__contacts form { float: right; width: 342px; padding: 0 68px 0 70px; border-left: 1px solid #ccc8bb; }
+.tabs__contacts form p { padding: 0 0 11px 9px; font-size: 13px; color: #000; }
+
+.tabs__phones { float: left; padding-left: 110px; }
+.tabs__phones p { font-size: 13px; font-weight: bold; }
+.tabs__phones img { margin: 15px 0 10px -40px; }
+.tabs__phones dl { text-transform: uppercase; }
+.tabs__phones dt { height: 25px; line-height: 25px; cursor: pointer; }
+.tabs__phones dt.active span:after { top: 6px; background: url('../img/icons-sed92e16a89.png') 0 -671px no-repeat; width: 5px; height: 4px; }
+.tabs__phones span { position: relative; padding-right: 10px; font-size: 13px; font-weight: bold; color: #4b412c; }
+.tabs__phones span:after { content: ''; position: absolute; top: 5px; right: 0; background: url('../img/icons-sed92e16a89.png') 0 -613px no-repeat; width: 4px; height: 5px; }
+.tabs__phones dd { display: none; }
+.tabs__phones dd, .tabs__phones a { font-family: 'Futuris', Arial, sans-serif; font-size: 24px; color: #000; font-weight: bold; }
+
+.txt-field, .txt-area { width: 324px; height: 20px; padding: 0 8px; margin-bottom: 6px; border: 1px solid #c0beb3; background: #fff; font-size: 11px; }
+.txt-field::-webkit-input-placeholder, .txt-area::-webkit-input-placeholder { color: #888780; }
+.txt-field:-moz-placeholder, .txt-area:-moz-placeholder { color: #888780; }
+
+.txt-area { height: 100px; padding: 4px 8px; }
+
+.txt-field_select { position: relative; width: 340px; padding: 0; line-height: 20px; }
+.txt-field_select span { position: relative; display: block; padding: 0 8px; font-size: 11px; color: #888780; cursor: pointer; }
+.txt-field_select span:after { content: ''; position: absolute; top: 8px; right: 7px; background: url('../img/icons-sed92e16a89.png') 0 -671px no-repeat; width: 5px; height: 4px; }
+.txt-field_select span.open:after { background: url('../img/icons-sed92e16a89.png') 0 -685px no-repeat; width: 5px; height: 4px; }
+.txt-field_select ul { display: none; position: absolute; top: 20px; left: -1px; width: 340px; border: 1px solid #c0beb3; border-width: 0 1px 1px 1px; background: #fff; font-size: 11px; }
+.txt-field_select li { padding: 0 8px; cursor: pointer; color: #888780; }
+.txt-field_select li:hover { background: #e3dbb2; color: #4b412c; }
 
 .director { overflow: hidden; }
 .director img { float: left; margin-right: 20px; }
-.director p { font-family: Arial, Tahoma, sans-serif; font-size: 13px; text-align: justify; color: #000; }
+.director p { font-size: 13px; text-align: justify; color: #000; }
 
-.director__title { color: #4b412c; }
-.director__title .h1 { font-size: 40px; }
+.director__title { margin-bottom: 15px; font-family: 'Futuris', Arial, sans-serif; color: #4b412c; }
+.director__title .h1 { padding: 17px 0 5px 0; font-size: 40px; }
 .director__title span { font-size: 18px; }
