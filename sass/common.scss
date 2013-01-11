@@ -54,10 +54,16 @@ table {
 	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 13px;
 }
+.clr {
+	clear: both;
+}
 //hr
 .hr {
 	height: 2px;
 	background: url(../img/icons/hr.png);
+}
+.hr_mod {
+	background: url(../img/icons/hr1.png);
 }
 //btn
 .btn {

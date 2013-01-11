@@ -13,6 +13,8 @@ function cover() {
 	$('.collection_popup, .collection__wrap_popup').css({'width': wnd_width - 40 + 'px', 'height': wnd_height - 40 + 'px'});
 	//video
 	//$('#video, .video-js').attr('style', 'width: ' + wnd_width + 'px !important; height: ' + wnd_height + 'px !important');
+	//sitemap
+	$('.sitemap').css({'width': wnd_width + 'px', 'height': wnd_height + 'px'});
 }
 //cover details
 function cover_detail() {
