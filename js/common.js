@@ -6,10 +6,13 @@ var wnd_height = $(window).height();
 //cover width and height
 function cover() {	
 	var wnd_width = $(window).width();
-	var wnd_height = $(window).height();
-	$('.cover ul, .cover li, .news, .video').css({'width': wnd_width + 'px', 'height': wnd_height - 121 + 'px'});
+	var wnd_height = $(window).height();	
+	$('.cover ul, .cover li, .news, #video').css({'width': wnd_width + 'px', 'height': wnd_height - 121 + 'px'});
 	$('.news__list').css({'width': wnd_width - 10 + 'px', 'height': wnd_height - 141 + 'px'});
-	$('.collection, .collection__wrap').css({'width': wnd_width - 40 + 'px', 'height': wnd_height - 161 + 'px'});
+	$('.collection_base, .collection__wrap_base').css({'width': wnd_width - 40 + 'px', 'height': wnd_height - 161 + 'px'});
+	$('.collection_popup, .collection__wrap_popup').css({'width': wnd_width - 40 + 'px', 'height': wnd_height - 40 + 'px'});
+	//video
+	//$('#video, .video-js').attr('style', 'width: ' + wnd_width + 'px !important; height: ' + wnd_height + 'px !important');
 }
 //cover details
 function cover_detail() {
