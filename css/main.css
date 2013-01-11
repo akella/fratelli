@@ -5,19 +5,19 @@
 
 .cover__video { position: absolute; left: 100px; bottom: 70px; border: 2px solid #fff; -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; z-index: 10; }
 .cover__video img { display: block; }
-.cover__video i { position: absolute; top: 50%; left: 50%; margin: -22px 0 0 -22px; background: url('../img/icons-sfcf92ee495.png') 0 -80px no-repeat; width: 44px; height: 44px; }
+.cover__video i { position: absolute; top: 50%; left: 50%; margin: -22px 0 0 -22px; background: url('../img/icons-sa46f196c86.png') 0 -218px no-repeat; width: 44px; height: 44px; }
 
 .cover__detail { position: absolute; top: 50%; left: 50%; text-align: center; font-family: 'Futuris', Arial, sans-serif; }
 
 .cover__detail_dark { color: #4b412c; }
-.cover__detail_dark .cover__title:before { background: url('../img/icons-sfcf92ee495.png') 0 -134px no-repeat; width: 91px; height: 16px; }
-.cover__detail_dark .cover__made-title span:before { background: url('../img/icons-sfcf92ee495.png') 0 -390px no-repeat; width: 16px; height: 6px; }
-.cover__detail_dark .cover__made-title span:after { background: url('../img/icons-sfcf92ee495.png') 0 -358px no-repeat; width: 16px; height: 6px; }
+.cover__detail_dark .cover__title:before { background: url('../img/icons-sa46f196c86.png') 0 -315px no-repeat; width: 91px; height: 16px; }
+.cover__detail_dark .cover__made-title span:before { background: url('../img/icons-sa46f196c86.png') 0 -726px no-repeat; width: 16px; height: 6px; }
+.cover__detail_dark .cover__made-title span:after { background: url('../img/icons-sa46f196c86.png') 0 -694px no-repeat; width: 16px; height: 6px; }
 
 .cover__detail_light { color: #f9f6e6; }
-.cover__detail_light .cover__title:before { background: url('../img/icons-sfcf92ee495.png') 0 -160px no-repeat; width: 91px; height: 16px; }
-.cover__detail_light .cover__made-title span:before { background: url('../img/icons-sfcf92ee495.png') 0 -374px no-repeat; width: 16px; height: 6px; }
-.cover__detail_light .cover__made-title span:after { background: url('../img/icons-sfcf92ee495.png') 0 -342px no-repeat; width: 16px; height: 6px; }
+.cover__detail_light .cover__title:before { background: url('../img/icons-sa46f196c86.png') 0 -341px no-repeat; width: 91px; height: 16px; }
+.cover__detail_light .cover__made-title span:before { background: url('../img/icons-sa46f196c86.png') 0 -710px no-repeat; width: 16px; height: 6px; }
+.cover__detail_light .cover__made-title span:after { background: url('../img/icons-sa46f196c86.png') 0 -678px no-repeat; width: 16px; height: 6px; }
 
 .cover__title, .cover__date { font-size: 40px; text-transform: uppercase; }
 

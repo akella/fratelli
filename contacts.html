@@ -53,12 +53,13 @@
 		<!-- BEGIN .tabs -->
 		<div class="tabs">
 			<ul class="tabs__menu">
-				<li class="active">контакты</li>
-				<li>адрес</li>
+				<li class="active" data-item="tabs__n1">контакты</li>
+				<li data-item="tabs__n2">адрес</li>
 			</ul>
+			<div class="hr"></div>
 			<div class="tabs__content">
-				<div class="tabs__groups">					
-					<div class="tabs__item tabs__contacts">
+				<div class="tabs__inner">
+					<div id="tabs__n1" class="tabs__contacts">
 						<div class="tabs__phones">
 							<p>Фирменный меховой магазин в Киеве<br>TМ DUE FRATELLI</p>
 							<img src="img/pic8.jpg" alt="">
@@ -73,33 +74,35 @@
 							  <dd><a href="mailto:dffurs@gmail.com">dffurs@gmail.com</a></dd>
 							</dl>
 						</div>
-						<form action="">
-							<p>Или отправьте нам сообщение посредством этой формы:</p>
-							<input class="txt-field" type="text" placeholder="Name *">
-							<input class="txt-field" type="text" placeholder="Surname *">
-							<input class="txt-field" type="text" placeholder="Telephone *">
-							<input class="txt-field" type="text" placeholder="E-mail *">
-							<div class="txt-field txt-field_select" type="text">
-								<span>Issue *</span>
-								<ul>
-									<li>What?</li>
-									<li>Where?</li>
-									<li>Why?</li>
-									<li>How?</li>
-								</ul>
-							</div>
-							<input class="txt-field" type="text" placeholder="Subject *">
-							<textarea class="txt-area" placeholder="Message *"></textarea>
-							<div class="checkbox">
-								<input id="privacy-policy" type="checkbox"><i></i>
-								<label for="privacy-policy">I have read and accepted the <a href="#">Privacy Policy</a></label>
-							</div>
-							<div class="btn">
-								<input type="submit" value="Отправить">
-							</div>
-						</form>
+						<div class="tabs__feedback">
+							<form action="">
+								<p>Или отправьте нам сообщение посредством этой формы:</p>
+								<input class="txt-field" type="text" placeholder="Name *">
+								<input class="txt-field" type="text" placeholder="Surname *">
+								<input class="txt-field" type="text" placeholder="Telephone *">
+								<input class="txt-field" type="text" placeholder="E-mail *">
+								<div class="txt-field txt-field_select" type="text">
+									<span>Issue *</span>
+									<ul>
+										<li>What?</li>
+										<li>Where?</li>
+										<li>Why?</li>
+										<li>How?</li>
+									</ul>
+								</div>
+								<input class="txt-field" type="text" placeholder="Subject *">
+								<textarea class="txt-area" placeholder="Message *"></textarea>
+								<div class="checkbox">
+									<input id="privacy-policy" type="checkbox"><i></i>
+									<label for="privacy-policy">I have read and accepted the <a href="#">Privacy Policy</a></label>
+								</div>
+								<div class="tabs__btn">
+									<input class="btn" type="submit" value="Отправить">
+								</div>
+							</form>
+						</div>
 					</div>
-					<div class="tabs__item tabs__adress">
+					<div id="tabs__n2" class="tabs__adress">
 						<span>г. Киев, ул. Красноармейская,72, ТЦ «Олимпийский», 2 этаж, бутик № 26</span>
 						<div class="tabs__map">
 							<img src="img/map.jpg" alt="">
@@ -107,6 +110,7 @@
 					</div>
 				</div>	
 			</div>
+			<div class="hr"></div>
 			<ul class="tabs__nav">
 				<li class="tabs__prev">НАЗАД</li>
 				<li class="tabs__next">ВПЕРЕД</li>

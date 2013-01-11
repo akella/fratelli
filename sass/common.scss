@@ -46,28 +46,39 @@ table {
 	border-collapse: collapse;
 }
 // common styles
+.h2 {
+	font-family: 'Futuris', Arial, sans-serif;
+	font-size: 18px;
+}
+.h3 {
+	font-family: 'Futuris', Arial, sans-serif;
+	font-size: 13px;
+}
+//hr
+.hr {
+	height: 2px;
+	background: url(../img/icons/hr.png);
+}
 //btn
 .btn {
-	text-align: center;
-	input {
-		display: inline-block;
-		height: 21px;
-		padding: 0 10px;
-		border: 1px solid $brown;
-		background: none;
-		color: $brown;
-		font-size: 11px;
-		text-transform: uppercase;
-		cursor: pointer;
-		&:hover {
-			border-color: $brown1;
-			color: $brown1;
-		}
-		&:active {
-			border-color: $brown;
-			background: $brown;
-			color: #f9f6e6;
-		}
+	display: inline-block;
+	height: 21px;
+	padding: 0 10px;
+	border: 1px solid $brown;
+	background: none;
+	color: $brown;
+	font-size: 11px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	cursor: pointer;
+	&:hover {
+		border-color: $brown1;
+		color: $brown1;
+	}
+	&:active {
+		border-color: $brown;
+		background: $brown;
+		color: #f9f6e6;
 	}
 }
 //checkbox
@@ -126,8 +137,12 @@ table {
 	height: 70px;
 	background: #36312c;
 	@include background-image(linear-gradient(left, #36312c, #4b443d 50%,  #36312c 100%));
+	@include box-shadow(rgba(0, 0, 0, 0.5) 0 0 2px);
 	overflow: hidden;
-	z-index: 10;
+	z-index: 150;
+}
+.header_mod {
+	position: fixed;
 }
 .logo {
 	position: absolute;
@@ -142,6 +157,29 @@ table {
 		@extend %hide-text;
 	}
 }
+.nav-btn {
+	position: absolute;
+	top: 27px;
+	left: 20px;
+	padding-right: 8px;
+	font-family: 'Futuris', Arial, sans-serif;
+	font-size: 11px;
+	color: $dark;
+	text-transform: uppercase;
+	text-decoration: underline;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 3px;
+		right: 0;
+		@include sized-sprite($icons, arr);
+	}
+}
+.nav-btn_open {
+	&:after {
+		@include sized-sprite($icons, arr1);
+	}
+}
 //nav
 .nav {
 	position: relative;
@@ -151,9 +189,11 @@ table {
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	text-align: center;
 	text-transform: uppercase;
-	z-index: 10;
+	z-index: 100;
 	ul {
+		height: 31px;
 		text-align: center;
+		overflow: hidden;
 	}
 	li {
 		display: inline-block;		
@@ -175,6 +215,11 @@ table {
 			}
 		}
 	}	
+}
+.nav_mod {
+	display: none;
+	position: fixed;
+	top: 70px;
 }
 .nav__select {
 	position: relative;
@@ -208,6 +253,7 @@ table {
 		position: absolute;
 		top: 31px;
 		left: 57px;
+		height: auto;
 		background: url(../img/icons/nav-bg.png);
 		line-height: 20px;
 	}
@@ -349,5 +395,49 @@ table {
 		i {
 			@include sized-sprite($icons, sm-h);
 		}
+	}
+}
+//share
+.share {
+	float: right;
+	margin: 9px 6px 0 0;
+	li {
+		float: left;
+		height: 21px;
+		margin-right: 6px;
+		line-height: 21px;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: $gray;
+	}
+	a {
+		display: block;
+	}
+}
+.share__fb {
+	@include sized-sprite($icons, share-fb);
+	&:hover {
+		@include sized-sprite($icons, share-fb-h);
+	}
+	&:active {
+		@include sized-sprite($icons, share-fb-a);
+	}
+}
+.share__vk {
+	@include sized-sprite($icons, share-vk);
+	&:hover {
+		@include sized-sprite($icons, share-vk-h);
+	}
+	&:active {
+		@include sized-sprite($icons, share-vk-a);
+	}
+}
+.share__tw {
+	@include sized-sprite($icons, share-tw);
+	&:hover {
+		@include sized-sprite($icons, share-tw-h);
+	}
+	&:active {
+		@include sized-sprite($icons, share-tw-a);
 	}
 }
