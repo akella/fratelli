@@ -13,11 +13,11 @@
 	position: relative;
 	padding: 20px 0 0 10px;
 }
-.news__close {
+.news__close { 
 	position: absolute;
 	top: 20px;
 	right: 5px;
-	@include sized-sprite($icons, news-close);
+	@include sized-sprite($icons, close);
 	z-index: 10;
 }
 .news__list {
@@ -34,7 +34,7 @@
 		}
 	}
 }
-.news__pic {
+.news__pic { 
 	img {
 		display: block;
 		&:hover {
@@ -592,7 +592,7 @@
 	position: absolute;
 	top: 4px;
 	right: 4px;
-	@include sized-sprite($icons, news-close);
+	@include sized-sprite($icons, close);
 }
 .collection__list {
 	position: absolute;
@@ -721,6 +721,13 @@
 		margin-top: -10px;
 	}
 }
+.collection__price-close {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	@include sized-sprite($icons, close);
+}
 .collection__phone {
 	overflow: hidden;
 	input {
@@ -755,6 +762,7 @@
 	}
 }
 .collection__left {
+	display: none;
 	left: 20px;
 	i {
 		left: 0;
