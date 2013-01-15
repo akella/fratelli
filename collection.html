@@ -30,16 +30,18 @@
 	<!-- END .header -->
 	<!-- BEGIN .nav -->
 	<nav class="nav">
-		<div class="nav__select">
-			Language:<span>Italiano</span>
-			<ul>
-				<li>English</li>
-				<li>Russian</li>
-				<li>Ukrainian</li>
-			</ul>
+		<div class="lang">
+			<div class="lang__title">Language:</div>			
+			<div class="lang__list">
+				<span>Italiano</span>
+				<ul>
+					<li>English</li>
+					<li>Русский</li>
+				</ul>
+			</div>			
 		</div>
-		<button class="nav__new">what's new!</button>
-		<ul>		
+		<button class="nav__new nav__new_is">what's new!</button>
+		<ul class="nav__list">		
 			<li><a href="#">Store</a></li>
 			<li><a class="active" href="#">Collection</a></li>
 			<li><a href="#">Art-Director</a></li>
@@ -54,7 +56,7 @@
 			<ul class="collection__list">
 				<button class="collection__left"><i></i></button>
 				<button class="collection__right"><i></i></button>
-				<li class="collection__about">
+				<li id="scrto1" class="collection__about collection__scrto">
 					<div class="collection__desc">
 						<h2 class="h2">NEW COLLECTION 2012-2013</h2>
 						<p>The mood for the Valentino Fall/Winter 2012-13 is sophisticated, romantic and dreamy but with a dark edge.</p>
@@ -71,18 +73,18 @@
 						</a>
 					</div>
 				</li>
-				<li class="collection__pic">
+				<li id="scrto2" class="collection__pic">
 					<img src="img/pic17.jpg" alt="">
 					<button class="collection__info">info</button>
 					<div class="collection__detail">
+						<button class="collection__detail-close"></button>	
 						<div class="collection__price">
 							<h3 class="h3">MINK KIMONO</h3>
 							<span>Blackglama, length 110 sm</span>
 							<b>model: DB128525</b>
-							<button class="btn">уточнить цену</button>
-							<button class="collection__price-close"></button>				
+							<button class="btn">уточнить цену</button>										
 						</div>
-						<form action="">
+						<form class="collection__form" action="">
 							<input class="txt-field" type="text" placeholder="Email">
 							<textarea class="txt-area" placeholder="Message"></textarea>
 							<div class="collection__phone">
@@ -90,23 +92,33 @@
 								<span>Если вы хотите чтоб вам перезвонили, укажите ваш контактный телефон</span>
 							</div>
 							<div class="collection__send">
-								<input class="btn" type="submit">
+								<input class="btn" type="submit" value="Отправить">
 							</div>
 						</form>
-					</div>
+						<div class="collection__message">
+							<h2 class="h2">Ваше сообщение отправлено</h2>
+							<p>Спасибо за Ваше сообщение, в ближайшее время с Вами свяжется консультант нашего магазина и уточнит все детали для Вашего заказа.</p>
+							<button class="btn">OK</button>
+						</div>						
+					</div>	
+					<ul class="share share_mod">
+						<li><a class="share__fb" href="#"></a></li>
+						<li><a class="share__vk" href="#"></a></li>
+						<li><a class="share__tw" href="#"></a></li>
+					</ul>				
 				</li>
-				<li class="collection__pic">
+				<li id="scrto3" class="collection__pic">
 					<img src="img/pic18.jpg" alt="">
 					<button class="collection__info">info</button>
 					<div class="collection__detail">
+						<button class="collection__detail-close"></button>	
 						<div class="collection__price">
 							<h3 class="h3">MINK KIMONO</h3>
 							<span>Blackglama, length 110 sm</span>
 							<b>model: DB128525</b>
-							<button class="btn">уточнить цену</button>		
-							<button class="collection__price-close"></button>						
+							<button class="btn">уточнить цену</button>										
 						</div>
-						<form action="">
+						<form class="collection__form" action="">
 							<input class="txt-field" type="text" placeholder="Email">
 							<textarea class="txt-area" placeholder="Message"></textarea>
 							<div class="collection__phone">
@@ -114,23 +126,33 @@
 								<span>Если вы хотите чтоб вам перезвонили, укажите ваш контактный телефон</span>
 							</div>
 							<div class="collection__send">
-								<input class="btn" type="submit">
+								<input class="btn" type="submit" value="Отправить">
 							</div>
 						</form>
-					</div>
+						<div class="collection__message">
+							<h2 class="h2">Ваше сообщение отправлено</h2>
+							<p>Спасибо за Ваше сообщение, в ближайшее время с Вами свяжется консультант нашего магазина и уточнит все детали для Вашего заказа.</p>
+							<button class="btn">OK</button>
+						</div>						
+					</div>	
+					<ul class="share share_mod">
+						<li><a class="share__fb" href="#"></a></li>
+						<li><a class="share__vk" href="#"></a></li>
+						<li><a class="share__tw" href="#"></a></li>
+					</ul>
 				</li>
-				<li class="collection__pic">
+				<li id="scrto4" class="collection__pic">
 					<img src="img/pic17.jpg" alt="">
 					<button class="collection__info">info</button>
 					<div class="collection__detail">
+						<button class="collection__detail-close"></button>	
 						<div class="collection__price">
 							<h3 class="h3">MINK KIMONO</h3>
 							<span>Blackglama, length 110 sm</span>
 							<b>model: DB128525</b>
-							<button class="btn">уточнить цену</button>	
-							<button class="collection__price-close"></button>							
+							<button class="btn">уточнить цену</button>										
 						</div>
-						<form action="">
+						<form class="collection__form" action="">
 							<input class="txt-field" type="text" placeholder="Email">
 							<textarea class="txt-area" placeholder="Message"></textarea>
 							<div class="collection__phone">
@@ -138,23 +160,33 @@
 								<span>Если вы хотите чтоб вам перезвонили, укажите ваш контактный телефон</span>
 							</div>
 							<div class="collection__send">
-								<input class="btn" type="submit">
+								<input class="btn" type="submit" value="Отправить">
 							</div>
 						</form>
+						<div class="collection__message">
+							<h2 class="h2">Ваше сообщение отправлено</h2>
+							<p>Спасибо за Ваше сообщение, в ближайшее время с Вами свяжется консультант нашего магазина и уточнит все детали для Вашего заказа.</p>
+							<button class="btn">OK</button>
+						</div>						
 					</div>
+					<ul class="share share_mod">
+						<li><a class="share__fb" href="#"></a></li>
+						<li><a class="share__vk" href="#"></a></li>
+						<li><a class="share__tw" href="#"></a></li>
+					</ul>						
 				</li>
-				<li class="collection__pic">
+				<li id="scrto5" class="collection__pic">
 					<img src="img/pic18.jpg" alt="">
 					<button class="collection__info">info</button>
 					<div class="collection__detail">
+						<button class="collection__detail-close"></button>	
 						<div class="collection__price">
 							<h3 class="h3">MINK KIMONO</h3>
 							<span>Blackglama, length 110 sm</span>
 							<b>model: DB128525</b>
-							<button class="btn">уточнить цену</button>
-							<button class="collection__price-close"></button>					
+							<button class="btn">уточнить цену</button>										
 						</div>
-						<form action="">
+						<form class="collection__form" action="">
 							<input class="txt-field" type="text" placeholder="Email">
 							<textarea class="txt-area" placeholder="Message"></textarea>
 							<div class="collection__phone">
@@ -162,10 +194,20 @@
 								<span>Если вы хотите чтоб вам перезвонили, укажите ваш контактный телефон</span>
 							</div>
 							<div class="collection__send">
-								<input class="btn" type="submit">
+								<input class="btn" type="submit" value="Отправить">
 							</div>
 						</form>
-					</div>
+						<div class="collection__message">
+							<h2 class="h2">Ваше сообщение отправлено</h2>
+							<p>Спасибо за Ваше сообщение, в ближайшее время с Вами свяжется консультант нашего магазина и уточнит все детали для Вашего заказа.</p>
+							<button class="btn">OK</button>
+						</div>						
+					</div>	
+					<ul class="share share_mod">
+						<li><a class="share__fb" href="#"></a></li>
+						<li><a class="share__vk" href="#"></a></li>
+						<li><a class="share__tw" href="#"></a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>

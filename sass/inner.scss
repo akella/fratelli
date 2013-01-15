@@ -674,6 +674,11 @@
 	&:last-child {
 		margin-right: 0px;
 	}
+	&:hover {
+		.share_mod {
+			display: block;
+		}
+	}
 }
 .collection__info, .collection__detail {
 	position: absolute;
@@ -694,21 +699,42 @@
 		@include sized-sprite($icons, acc1);
 	}
 }
+.collection__message {
+	display: none;
+	text-align: center;
+	.h2 {
+		margin-bottom: 10px;		
+		text-transform: uppercase;
+	}
+	p {
+		text-align: left;
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
+}
 .collection__detail {
 	display: none;
 	width: 342px;
 	padding: 10px;	
 	z-index: 10;
-	form {
-		display: none;
-	}
+}
+.collection__form {
+	display: none;
+	padding-top: 10px;
 	.txt-area {
 		height: 48px;
 	}
 }
+.collection__detail-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	@include sized-sprite($icons, close);
+	z-index: 10;
+}
 .collection__price {
 	position: relative;
-	padding: 0 125px 10px 5px;
+	padding: 0 125px 0 5px;
 	span, b {
 		display: block;
 		margin-top: 2px;
@@ -720,13 +746,6 @@
 		right: 0;
 		margin-top: -10px;
 	}
-}
-.collection__price-close {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	@include sized-sprite($icons, close);
 }
 .collection__phone {
 	overflow: hidden;
@@ -777,6 +796,7 @@
 	}
 }
 .share_mod {
+	display: none;
 	position: absolute;
 	right: 20px;
 	bottom: 20px;

@@ -194,21 +194,27 @@
 .collection__pic { position: relative; margin-right: 10px; }
 .collection__pic img { height: 100%; }
 .collection__pic:last-child { margin-right: 0px; }
+.collection__pic:hover .share_mod { display: block; }
 
 .collection__info, .collection__detail { position: absolute; left: 20px; bottom: 20px; background: #f9f6e6; }
 
 .collection__info { padding: 4px 15px 4px 5px; font-size: 12px; color: #888780; text-transform: uppercase; }
 .collection__info:after { content: ""; position: absolute; top: 7px; right: 6px; background: url('../img/icons-s74d18a88fe.png') 0 -1467px no-repeat; width: 4px; height: 5px; }
 
-.collection__detail { display: none; width: 342px; padding: 10px; z-index: 10; }
-.collection__detail form { display: none; }
-.collection__detail .txt-area { height: 48px; }
+.collection__message { display: none; text-align: center; }
+.collection__message .h2 { margin-bottom: 10px; text-transform: uppercase; }
+.collection__message p { text-align: left; margin-bottom: 10px; font-size: 12px; }
 
-.collection__price { position: relative; padding: 0 125px 10px 5px; }
+.collection__detail { display: none; width: 342px; padding: 10px; z-index: 10; }
+
+.collection__form { display: none; padding-top: 10px; }
+.collection__form .txt-area { height: 48px; }
+
+.collection__detail-close { position: absolute; top: 5px; right: 5px; background: url('../img/icons-s74d18a88fe.png') 0 -1326px no-repeat; width: 12px; height: 12px; z-index: 10; }
+
+.collection__price { position: relative; padding: 0 125px 0 5px; }
 .collection__price span, .collection__price b { display: block; margin-top: 2px; font-size: 12px; }
 .collection__price .btn { position: absolute; top: 50%; right: 0; margin-top: -10px; }
-
-.collection__price-close { display: none; position: absolute; top: 0; right: 0; background: url('../img/icons-s74d18a88fe.png') 0 -1326px no-repeat; width: 12px; height: 12px; }
 
 .collection__phone { overflow: hidden; }
 .collection__phone input { float: right; width: 110px; }
@@ -225,7 +231,7 @@
 .collection__right { right: 20px; }
 .collection__right i { right: 0; background: url('../img/icons-s74d18a88fe.png') 0 -1102px no-repeat; width: 11px; height: 18px; }
 
-.share_mod { position: absolute; right: 20px; bottom: 20px; margin: 0; }
+.share_mod { display: none; position: absolute; right: 20px; bottom: 20px; margin: 0; }
 .share_mod li { margin: 0 0 0 6px; }
 .share_mod .share__fb { background: url('../img/icons-s74d18a88fe.png') 0 -1040px no-repeat; width: 19px; height: 21px; }
 .share_mod .share__fb:hover { background: url('../img/icons-s74d18a88fe.png') 0 -714px no-repeat; width: 19px; height: 21px; }

@@ -72,6 +72,7 @@ table {
 	padding: 0 10px;
 	border: 1px solid $brown;
 	background: none;
+	@include box-shadow(rgba(0,0,0,0.2) 0 1px 3px);
 	color: $brown;
 	font-size: 11px;
 	text-transform: uppercase;
@@ -196,11 +197,11 @@ table {
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 100;
-	ul {
-		height: 31px;
-		text-align: center;
-		overflow: hidden;
-	}
+}
+.nav__list {
+	height: 31px;
+	text-align: center;
+	overflow: hidden;
 	li {
 		display: inline-block;		
 		a {
@@ -220,32 +221,44 @@ table {
 				cursor: default;
 			}
 		}
-	}	
+	}
 }
 .nav_mod {
 	display: none;
 	position: fixed;
 	top: 70px;
 }
-.nav__select {
+//languages
+.lang {
 	position: relative;
-	float: left;
+	float: left;	
 	height: 31px;
-	line-height: 31px;
 	margin-left: 20px;
 	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 11px;	
-	color: $dark;
+	color: $dark;	
+}
+.lang__title {
+	float: left;
+	height: 31px;
+	line-height: 31px;
+}
+.lang__list {
+	float: left;	
+	padding: 10px 10px 0 10px;
+	margin-left: -5px;
 	span {
 		position: relative;
-		padding: 0 8px 0 7px;
+		display: block;
+		padding-bottom: 10px;
 		text-decoration: underline;
+		text-align: left;
 		cursor: pointer;
 		&:after {
 			content: '';
 			position: absolute;
 			top: 3px;
-			right: 0;
+			right: -7px;
 			@include sized-sprite($icons, arr);
 		}
 		&.open {
@@ -256,21 +269,27 @@ table {
 	}
 	ul {
 		display: none;
-		position: absolute;
-		top: 31px;
-		left: 57px;
-		height: auto;
-		background: url(../img/icons/nav-bg.png);
-		line-height: 20px;
 	}
 	li {
-		display: block;
-		padding: 0 10px;
+		margin-bottom: 10px;
 		text-align: left;
-		white-space: nowrap;
 		cursor: pointer;
-		&:hover {
-			color: $light;
+	}
+	&.open {
+		background: $yellow;
+		color: $brown;
+		border: 1px solid $brown;
+		span {
+			text-decoration: none;
+			cursor: default;
+			&:after {
+				display: none;
+			}
+		}
+		li {
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
