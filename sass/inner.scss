@@ -389,22 +389,27 @@
 	padding-top: 70px;
 }
 .article__pic {
+	position: relative;
 	background: url(../img/icons/article-bg.png);
 	img {
 		display: block;
 	}
 	.container {
 		position: relative;
+		z-index: 5;
 	}
 }
 .article__scroll {
 	position: absolute;
-	right: -100px;
+	right: 100px;
 	bottom: 25px;
+	margin-left: 43%;
 	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 11px;
 	color: $dark;
 	text-transform: uppercase;
+	@include animation(scrollcolor 1s linear infinite);
+	z-index: 10;
 	&:after {
 		content: "";
 		position: absolute;
@@ -413,6 +418,17 @@
 		margin-left: -3px;
 		@include sized-sprite($icons, arr);
 	}
+}
+@include keyframes(scrollcolor) {
+	0% {
+		opacity: 0;
+	}	
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}	
 }
 .article__desc {
 	position: absolute;
@@ -459,6 +475,13 @@
 			top: 5px;
 			left: 9px;
 			@include sized-sprite($icons, prev);
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+		&:active {
+			text-decoration: none;
+			color: #000;
 		}
 	}
 }
@@ -522,6 +545,7 @@
 }
 //related
 .related {
+	overflow: hidden;
 	margin-bottom: 40px;
 	.h1 {
 		padding: 0 0 5px 5px;		
@@ -531,17 +555,17 @@
 		text-transform: uppercase;
 	}
 }
-.related__list {
+.related__list {	
 	ul {
-		padding: 3px 5px 8px 5px;
-		margin: -3px -30px 0 -10px;		
+		padding: 3px 5px 8px 8px;
+		margin: -3px -30px 0 -5px;		
 		overflow: hidden;
 	}
 	li {
 		float: left;
 		width: 300px;
 		padding: 5px;
-		margin-right: 19px;
+		margin-right: 12px;
 		&:hover {
 			padding: 4px 5px 5px 5px;
 			margin-top: -2px;

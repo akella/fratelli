@@ -150,17 +150,21 @@ table {
 }
 .header_mod {
 	position: fixed;
+	.logo {
+		min-width: 960px;
+	}
 }
 .logo {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -130px;
-	@include sized-sprite($icons, logo);
-	a {
-		display: block;
+	position: relative;	
+	height: 70px;
+	a {		
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -130px;
 		width: 260px;
 		height: 70px;
+		@include sized-sprite($icons, logo);
 		@extend %hide-text;
 	}
 }
@@ -174,6 +178,7 @@ table {
 	color: $dark;
 	text-transform: uppercase;
 	text-decoration: underline;
+	z-index: 10;
 	&:after {
 		content: "";
 		position: absolute;
