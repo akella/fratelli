@@ -1,4 +1,6 @@
 @font-face { font-family: 'Futuris'; src: url("../fonts/Futuris-Cyrillic.woff"); }
 
 /*styles for layouts*/
-.columns { -webkit-column-width: 225px; -webkit-column-gap: 20px; -moz-column-width: 225px; -moz-column-gap: 20px; column-count: 225px; column-gap: 20px; text-align: justify; }
+.columns { -webkit-column-width: 225px; -webkit-column-gap: 20px; -moz-column-width: 225px; -moz-column-gap: 20px; column-width: 225px; column-gap: 20px; text-align: justify; }
+
+.columns2 { -webkit-column-count: 2; -webkit-column-gap: 20px; -moz-column-count: 2; -moz-column-gap: 20px; column-count: 2; column-gap: 20px; text-align: justify; }

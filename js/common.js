@@ -16,6 +16,13 @@ function width_height() {
 	$('.video-js').attr('height', wnd_height - 121);
 	//sitemap
 	$('.sitemap').css({'width': wnd_width + 'px', 'height': wnd_height + 'px'});
+	//director pic
+	if (wnd_width>960) {
+		$('.director img').css('height', wnd_height - 121 + 'px');
+	}
+	else {
+		$('.director img').css('height', 'auto');
+	}
 }
 //cover details
 function cover_detail() {
