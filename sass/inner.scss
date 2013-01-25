@@ -182,19 +182,25 @@
 .tabs__adress {
 	float: left;
 	width: 960px;
-	span {
+	strong {
 		display: block;
 		text-align: center;
 		font-size: 13px;
 		color: #000;
 	}
+	@include respond-to(step1) {
+		float: none;
+		width: auto;
+	}
 }
 .tabs__map {
 	width: 720px;
-	margin: 10px 0 0 119px;
-	border: 1px solid #c3c3bf;
-	img {
-		display: block;
+	margin: 10px 0 0 119px;	
+	iframe {
+		border: 1px solid #c3c3bf;
+	}
+	@include respond-to(step1) {
+		margin: 10px 0 0 0;
 	}
 }
 .tabs__phones {
@@ -245,6 +251,12 @@
 		font-size: 24px;
 		color: #000;
 		font-weight: bold;
+	}
+	@include respond-to(step1) {
+		float: none;
+		width: 320px;
+		margin: 0 auto 30px;
+		padding: 0;
 	}
 }
 //tabs content
@@ -318,7 +330,11 @@
 		p {
 			padding: 0 0 11px 9px;
 			font-size: 13px;
+			font-weight: bold;
 			color: #000;
+		}
+		@include respond-to(step3) {
+			width: 282px;
 		}
 	}
 	@include respond-to(step1) {
@@ -335,6 +351,17 @@
 		border-left: 1px solid #ccc8bb;
 		form {
 			margin: 0;
+		}
+	}
+	@include respond-to(step1) {
+		float: none;
+		width: auto;
+		.tabs__feedback {
+			float: none;
+			width: 342px;
+			margin: 0 auto 20px;
+			padding: 0;
+			border: none;
 		}
 	}
 }
@@ -366,10 +393,17 @@
 	&:-moz-placeholder {
 		color: $gray;
 	}
+	@include respond-to(step3) {
+		width: 270px;
+		padding: 0 5px;
+	}
 }
 .txt-area {
 	height: 95px;
 	padding: 4px 8px;
+	@include respond-to(step3) {
+		padding: 4px 5px;
+	}
 }
 .txt-field_select {
 	position: relative;
@@ -414,6 +448,12 @@
 		&:hover {
 			background: $yellow;
 			color: $brown;
+		}
+	}
+	@include respond-to(step3) {
+		width: 280px;
+		ul {
+			width: 280px;
 		}
 	}
 }
@@ -497,6 +537,10 @@
 		bottom: -7px;
 		margin-left: -3px;
 		@include sized-sprite($icons, arr);
+	}
+	@include respond-to(step1) {
+		right: 5px;
+		margin-left: 0px;
 	}
 }
 @include keyframes(scrollcolor) {
@@ -661,6 +705,11 @@
 		padding: 3px 5px 8px 8px;
 		margin: -3px -30px 0 -5px;		
 		overflow: hidden;
+		@include respond-to(step1) {
+			padding: 3px 0 8px 0;
+			margin: -3px 0 0 0;
+			text-align: center;
+		}
 	}
 	li {
 		float: left;
@@ -673,8 +722,11 @@
 			border-top: 3px solid #494033;
 			@include box-shadow(rgba(0,0,0,0.2) 0 -1px 15px, rgba(0,0,0,0.2) 0 -1px 4px);
 		}
-		@include respond-to(step3) {
+		@include respond-to(step1) {
+			float: none;
+			display: inline-block;
 			margin-right: 0px;
+			vertical-align: top;
 		}
 	}
 }
@@ -715,18 +767,28 @@
 .collection {
 	position: relative;
 	padding: 20px;
+	@include respond-to(step3) {
+		padding: 5px;
+	}
 }
 .collection__close {
 	position: absolute;
 	top: 4px;
 	right: 4px;
 	@include sized-sprite($icons, close);
+	z-index: 10;
 }
 .collection__list {
 	position: absolute;
 	left: 0;
 	white-space: nowrap;		
 	font-size: 0;
+	@include respond-to(step3) {
+		position: relative;
+		left: auto;
+		margin-bottom: 40px;
+		white-space: normal;
+	}
 }
 .collection__wrap {
 	position: relative;
@@ -735,11 +797,19 @@
 .collection__about {
 	width: 310px;
 	padding-right: 20px;
+	@include respond-to(step3) {
+		width: auto;
+		padding: 0;
+	}
 }
 .collection__about, .collection__pic {
 	display: inline-block;
 	white-space: normal;		
 	vertical-align: top;
+	@include respond-to(step3) {
+		display: block;
+		margin-bottom: 20px;
+	}
 }
 .collection__desc {
 	margin: 0 0 40px 0;
@@ -770,6 +840,7 @@
 	}
 }
 .collection__video {	
+	margin-bottom: 20px;
 	.h2 {
 		margin-bottom: 5px;
 		text-transform: uppercase;
@@ -792,6 +863,12 @@
 			display: block;		
 		}
 	}
+	@include respond-to(step3) {
+		text-align: center;
+		a {
+			display: inline-block;
+		}
+	}
 }
 .collection__pic {
 	position: relative;
@@ -805,6 +882,13 @@
 	&:hover {
 		.share_mod {
 			display: block;
+		}
+	}
+	@include respond-to(step3) {
+		margin-right: 0px;
+		img {
+			width: 100%;
+			height: auto;
 		}
 	}
 }
@@ -906,6 +990,9 @@
 		position: absolute;
 		top: 50%;		
 		margin-top: -9px;
+	}
+	@include respond-to(step3) {
+		display: none;
 	}
 }
 .collection__left {

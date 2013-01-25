@@ -94,9 +94,8 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 /* The default control bar. Created by bar.js */
 .vjs-default-skin .vjs-controls {
   position: absolute;
-  bottom: 50px; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
-  left: 0; right: 0; /* 100% width of div */
-  margin: 0; padding: 0; /* Controls are absolutely position, so no padding necessary */
+  bottom: 20px; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  left: 20%; right: 20%; /* 100% width of div */  
   height: 20px; /* Including any margin you want above or below control items */
   color: #fff;
 
@@ -126,7 +125,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 
 /* Play/Pause
 -------------------------------------------------------------------------------- */
-.vjs-default-skin .vjs-play-control { width: 5em; cursor: pointer !important; left: 285px;}
+.vjs-default-skin .vjs-play-control { width: 5em; cursor: pointer !important; left: -18px;}
 /* Play Icon */
 .vjs-default-skin.vjs-paused .vjs-play-control div { width: 15px; height: 17px; background: url('../img/video-js.png'); margin: 0.5em auto 0; }
 .vjs-default-skin.vjs-playing .vjs-play-control div { width: 15px; height: 17px; background: url('../img/video-js.png') -25px 0; margin: 0.5em auto 0; }
@@ -138,14 +137,14 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 
 /* Volume/Mute
 -------------------------------------------------------------------------------- */
-.vjs-default-skin .vjs-mute-control { width: 3.8em; cursor: pointer !important; left: 220px; }
+.vjs-default-skin .vjs-mute-control { width: 3.8em; cursor: pointer !important; left: -88px; }
 .vjs-default-skin .vjs-mute-control div { width: 22px; height: 16px; background: url('../img/video-js.png') -75px -25px; margin: 0.5em auto 0; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-0 div { background: url('../img/video-js.png') 0 -25px; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-1 div { background: url('../img/video-js.png') -25px -25px; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-2 div { background: url('../img/video-js.png') -50px -25px; }
 
 
-.vjs-default-skin .vjs-volume-control { width: 5em; left: 315px; }
+.vjs-default-skin .vjs-volume-control { width: 5em; left: 0; }
 .vjs-default-skin .vjs-volume-bar {
   position: relative; width: 5em; height: 0.6em; margin: 1em auto 0; cursor: pointer !important;
 
@@ -182,7 +181,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 -------------------------------------------------------------------------------- */
 .vjs-default-skin div.vjs-progress-control {
   position: absolute;
-  left: 300px; right: 300px; /* Leave room for time displays. */
+  left: 0; right: 0; /* Leave room for time displays. */
   height: 2px; width: auto;
   top: -1.3em; /* Set above the rest of the controls. And leave room for 2px of borders (progress bottom and controls top). */
   /* 1px top shadow */

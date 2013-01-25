@@ -29,7 +29,7 @@
 	</header>
 	<!-- END .header -->
 	<!-- BEGIN .nav -->
-	<nav class="nav">
+	<nav class="nav-wrap">
 		<div class="lang">
 			<div class="lang__title">Language:</div>			
 			<div class="lang__list">
@@ -39,15 +39,20 @@
 					<li>Русский</li>
 				</ul>
 			</div>			
-		</div>
-		<button class="nav__new nav__new_is">what's new!</button>
-		<ul class="nav__list">		
-			<li><a href="#">Store</a></li>
-			<li><a href="#">Collection</a></li>
-			<li><a class="active" href="#">Art-Director</a></li>
-			<li><a href="#">Work with us</a></li>
-			<li><a href="#">Contacts</a></li>		
-		</ul>	
+		</div>		
+		<div class="nav">		
+			<button class="nav__title"><span>Menu<i></i></span></button>
+			<div class="nav__drop">
+				<div class="nav__new nav__new_is"><button>what's new!</button></div>
+				<ul class="nav__list">
+					<li><a href="#">Store</a></li>
+					<li><a href="#">Collection</a></li>
+					<li><a href="#">Art-Director</a></li>
+					<li><a href="#">Work with us</a></li>
+					<li><a href="#">Contacts</a></li>		
+				</ul>	
+			</div>		
+		</div>	
 	</nav>
 	<!-- END .nav -->
 	<!-- BEGIN .container -->
@@ -74,9 +79,9 @@
 	<div class="footer__play"><button>play<i></i></button></div>
 	<div class="footer__sitemap"><a href="#">sitemap<i></i></a></div>
 	<ul>		
-		<li class="footer__tw"><a href="#">twitter<i></i></a></li>		
-		<li class="footer__fb"><a href="#">facebook<i></i></a></li>
-		<li class="footer__yt"><a href="#">youtube<i></i></a></li>		
+		<li class="footer__tw"><a href="#"><span>twitter</span><i></i></a></li>		
+		<li class="footer__fb"><a href="#"><span>facebook</span><i></i></a></li>
+		<li class="footer__yt"><a href="#"><span>youtube</span><i></i></a></li>		
 	</ul>
 </footer>
 <!-- END .footer -->

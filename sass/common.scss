@@ -149,7 +149,7 @@ table {
 	@include background-image(linear-gradient(left, #36312c, #4b443d 50%,  #36312c 100%));
 	@include box-shadow(rgba(0, 0, 0, 0.5) 0 0 2px);
 	overflow: hidden;
-	z-index: 150;
+	z-index: 50;
 }
 .header_mod {
 	position: fixed;
@@ -168,10 +168,12 @@ table {
 		top: 0;
 		left: 50%;
 		margin-left: -130px;
-		width: 260px;
-		height: 70px;
 		@include sized-sprite($icons, logo);
 		@extend %hide-text;
+		@include respond-to(step1) {
+			margin-left: -90px;
+			@include sized-sprite($icons, logo-s);
+		}
 	}
 }
 .nav-btn {
@@ -199,26 +201,52 @@ table {
 	}
 }
 //nav
-.nav {
+.nav-wrap {
 	position: relative;
 	width: 100%;
+	height: 31px;
 	background: url(../img/icons/nav-bg.png);
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 100;
 }
+.nav-wrap_mod {
+	display: none;
+	position: fixed;
+	top: 70px;
+	@include respond-to(step1) {
+		.lang {
+			left: auto;
+			right: 5px;
+		}
+	}
+}
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;	
+	@include respond-to(step1) {
+		background: $light;
+	}
+}
+.nav__drop {
+	@include respond-to(step1) {
+		display: none;
+	}	
+}
 .nav__list {
 	text-align: center;
 	li {
-		display: inline-block;		
+		display: inline-block;
 		a {
-			display: block;
+			display: block;	
 			height: 31px;
 			padding: 0 15px;
 			line-height: 31px;
 			font-family: 'Futuris', Arial, sans-serif;
-			font-size: 14px;
+			font-size: 14px;								
 			color: $dark;
 			&:hover {
 				color: $light;
@@ -228,31 +256,113 @@ table {
 				color: $brown;
 				cursor: default;
 			}
+			@include respond-to(step1) {
+				color: $brown;
+				&:hover {
+					color: $brown;
+				}
+			}
+		}
+		@include respond-to(step1) {
+			display: block;
+			border-bottom: 1px solid #4a433d;
 		}
 	}
-	@include respond-to(step1) {
-		padding-top: 31px;
-	}	
 }
-.nav_mod {
+.nav__title, .nav__new {	
+	span, button {
+		font-family: 'Futuris', Arial, sans-serif;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+}
+.nav__title {
 	display: none;
-	position: fixed;
-	top: 70px;
+	width: 100%;
+	background: $yellow;
+	border-bottom: 1px solid #4a433d;
+	height: 31px;
+	line-height: 31px;
+	cursor: pointer;
+	span {
+		position: relative;
+	}
+	i {
+		position: absolute;
+		top: 4px;
+		right: -12px;
+		@include sized-sprite($icons, acc2);
+	}
+	@include respond-to(step1) {
+		display: block;
+	}
+	&.active {
+		i {
+			@include sized-sprite($icons, acc3);
+		}
+	}
+}
+.nav__new {
+	position: absolute;
+	top: 0;
+	right: 0;	
+	background: $yellow;			
+	button {
+		height: 31px;
+		padding: 0 15px;
+		line-height: 31px;		
+		color: #000;
+	}
+	@include respond-to(step1) {
+		position: relative;
+		padding: 0;
+		background: none;
+		border-bottom: 1px solid #4a433d;
+		button {
+			width: 100%;
+			color: $brown;
+		}
+	}
+}
+.nav__new_is {
+	@include animation(flashing 2s linear infinite);
+}
+@include keyframes(flashing) {
+	0% {
+		background: #fff;
+		color: #000;
+	}	
+	50% {
+		background: #808080;
+		color: #000;
+	}
+	100% {
+		background: #fff;
+		color: #000;
+	}	
 }
 //languages
 .lang {
-	position: relative;
-	float: left;	
+	position: absolute;
+	top: 0;
+	left: 20px;
 	height: 31px;
-	margin-left: 20px;
 	font-family: 'Futuris', Arial, sans-serif;
 	font-size: 11px;	
 	color: $dark;	
+	z-index: 10;
+	@include respond-to(step1) {
+		top: -51px;
+		left: 5px;
+	}
 }
 .lang__title {
 	float: left;
 	height: 31px;
 	line-height: 31px;
+	@include respond-to(step1) {
+		display: none;
+	}
 }
 .lang__list {
 	float: left;	
@@ -304,46 +414,23 @@ table {
 		}
 	}
 }
-.nav__new {
-	float: right;	
-	height: 31px;
-	line-height: 31px;
-	padding: 0 15px;
-	background: $yellow;
-	font-family: 'Futuris', Arial, sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #000;		
-}
-.nav__new_is {
-	@include animation(flashing 2s linear infinite);
-}
-@include keyframes(flashing) {
-	0% {
-		background: #fff;
-		color: #000;
-	}	
-	50% {
-		background: #808080;
-		color: #000;
-	}
-	100% {
-		background: #fff;
-		color: #000;
-	}	
-}
 //footer
 .footer {
 	position: relative;
 	width: 100%;
+	height: 20px;
 	background: url(../img/icons/nav-bg.png);
 	@include box-shadow(rgba(0,0,0,0.5) 0 0 2px);
-	z-index: 10;
+	overflow: hidden;
 	ul {
 		text-align: center;
 	}	
 	li {
-		display: inline-block;		
+		display: inline-block;	
+		margin: 0 10px;
+		@include respond-to(step1) {
+			margin: 0 3px;
+		}	
 	}
 	a, button {
 		position: relative;
@@ -382,7 +469,6 @@ table {
 	}
 }
 .footer__tw {
-	margin: 0 10px;
 	i {
 		left: 2px;
 		@include sized-sprite($icons, tw);
@@ -394,7 +480,6 @@ table {
 	}
 }
 .footer__fb {
-	margin: 0 10px;
 	i {
 		@include sized-sprite($icons, fb);
 	}
@@ -405,7 +490,6 @@ table {
 	}
 }
 .footer__yt {
-	margin: 0 10px;
 	i {
 		@include sized-sprite($icons, yt);
 	}
@@ -415,16 +499,29 @@ table {
 		}
 	}
 }
+.footer__fb, .footer__tw, .footer__yt {	
+	span {
+		@include respond-to(step1) {
+			display: none;
+		}
+	}	
+}
 .footer__sitemap {
 	float: right;
 	margin: 0 9px 0 20px;
 	a {
 		padding: 0 26px 0 0;
+		@include respond-to(step1) {
+			padding: 0 6px 0 0;
+		}
 	}	
 	i {
 		left: auto;
 		right: 0;
 		@include sized-sprite($icons, sm);
+		@include respond-to(step1) {
+			display: none;
+		}
 	}
 	&:hover {
 		i {

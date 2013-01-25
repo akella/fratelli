@@ -6,8 +6,10 @@
 .cover__video { position: absolute; left: 100px; bottom: 70px; border: 2px solid #fff; -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; z-index: 10; }
 .cover__video img { display: block; }
 .cover__video i { position: absolute; top: 50%; left: 50%; margin: -22px 0 0 -22px; background: url('../img/icons-s74d18a88fe.png') 0 -415px no-repeat; width: 44px; height: 44px; }
+@media only screen and (max-width: 960px) { .cover__video { left: 50%; bottom: 25px; margin-left: -117px; } }
 
 .cover__detail { position: absolute; top: 50%; left: 50%; text-align: center; font-family: 'Futuris', Arial, sans-serif; }
+@media only screen and (max-width: 960px) { .cover__detail { position: relative; top: 30px; left: 0; padding-bottom: 180px; } }
 
 .cover__detail_dark { color: #4b412c; }
 .cover__detail_dark .cover__title:before { background: url('../img/icons-s74d18a88fe.png') 0 -512px no-repeat; width: 91px; height: 16px; }
@@ -20,17 +22,21 @@
 .cover__detail_light .cover__made-title span:after { background: url('../img/icons-s74d18a88fe.png') 0 -1210px no-repeat; width: 16px; height: 6px; }
 
 .cover__title, .cover__date { font-size: 40px; text-transform: uppercase; }
+@media only screen and (max-width: 960px) { .cover__title, .cover__date { font-size: 30px; } }
 
 .cover__title { position: relative; padding-top: 33px; }
 .cover__title:before { content: ""; position: absolute; top: 0; left: 50%; margin-left: -45px; }
 
 .cover__date { margin-bottom: 27px; }
+@media only screen and (max-width: 960px) { .cover__date { margin-bottom: 17px; } }
 
 .cover__made-title { margin-bottom: 13px; }
 .cover__made-title span { position: relative; font-size: 14px; }
 .cover__made-title span:before, .cover__made-title span:after { content: ""; position: absolute; top: 5px; }
 .cover__made-title span:before { left: -24px; }
 .cover__made-title span:after { right: -24px; }
+@media only screen and (max-width: 960px) { .cover__made-title span { font-size: 10px; } }
 
 .cover__made-person { font-size: 18px; }
 .cover__made-person span { margin: 0 5px; font-size: 11px; }
+@media only screen and (max-width: 960px) { .cover__made-person { font-size: 13px; } }

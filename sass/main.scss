@@ -28,6 +28,11 @@
 		margin: -22px 0 0 -22px;
 		@include sized-sprite($icons, play-gal);
 	}
+	@include respond-to(step1) {
+		left: 50%;
+		bottom: 25px;
+		margin-left: -117px;
+	}
 }
 .cover__detail {
 	position: absolute;
@@ -35,6 +40,12 @@
 	left: 50%;
 	text-align: center;
 	font-family: 'Futuris', Arial, sans-serif;
+	@include respond-to(step1) {
+		position: relative;
+		top: 30px;
+		left: 0;
+		padding-bottom: 180px;
+	}
 }
 .cover__detail_dark {
 	color: $brown;
@@ -75,6 +86,9 @@
 .cover__title, .cover__date {	
 	font-size: 40px;
 	text-transform: uppercase;
+	@include respond-to(step1) {
+		font-size: 30px;
+	}
 }
 .cover__title {
 	position: relative;
@@ -89,12 +103,15 @@
 }
 .cover__date {
 	margin-bottom: 27px;
+	@include respond-to(step1) {
+		margin-bottom: 17px;
+	}
 }
 .cover__made-title {
 	margin-bottom: 13px;
 	span {
 		position: relative;
-		font-size: 14px;
+		font-size: 14px;		
 		&:before, &:after {
 			content: "";
 			position: absolute;
@@ -106,6 +123,9 @@
 		&:after {
 			right: -24px;
 		}
+		@include respond-to(step1) {
+			font-size: 10px;
+		}
 	}
 }
 .cover__made-person {
@@ -113,5 +133,8 @@
 	span {
 		margin: 0 5px;
 		font-size: 11px;
+	}
+	@include respond-to(step1) {
+		font-size: 13px;
 	}
 }
