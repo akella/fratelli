@@ -897,6 +897,9 @@
 	left: 20px;
 	bottom: 20px;
 	background: $light;	
+	@include respond-to(step3) {
+		left: 0;
+	}
 }
 .collection__info {	
 	padding: 4px 15px 4px 5px;	
@@ -929,6 +932,9 @@
 	width: 342px;
 	padding: 10px;	
 	z-index: 10;
+	@include respond-to(step3) {
+		width: 300px;
+	}
 }
 .collection__form {
 	display: none;
@@ -1076,6 +1082,9 @@
 		height: 104px;
 		margin-bottom: 15px;
 		overflow: hidden;
+		span {
+			text-transform: uppercase;
+		}
 		&:hover {
 			overflow: visible;
 		}

@@ -76,12 +76,37 @@ function collection_pic() {
 		$(this).parent().css('width', coll_pic_width + 'px');
 	});
 }
+//nav drop
+function main_nav() {	
+	var wnd_width = $(window).width();
+	if (wnd_width < 960) {
+		$('.nav__title').click(function() {
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				$(this).next().slideUp();
+			}
+			else {
+				$(this).addClass('active');
+				$(this).next().slideDown(); 
+			}
+		});
+		$('.nav__list a').click(function() {
+			var nav_item = $(this).text();
+			$('.nav__title').removeClass('active');
+			$('.nav__drop').slideUp();
+			$('.nav__title span').html(nav_item + '<i></i>');
+			return false;
+		});
+	};
+}
 //functions
+main_nav();
 width_height();
 cover_detail();
 cover_slider();
 //resize
 $(window).resize(function () {
+	main_nav();	
 	width_height();
 	cover_detail();
 	cover_slider();	
@@ -129,27 +154,12 @@ $('.tabs__phones dt').click(function() {
 		$(this).addClass('active').next().slideDown();
 	}
 });
-//nav drop
-$('.nav__title').click(function() {
-	if ($(this).hasClass('active')) {
-		$(this).removeClass('active');
-		$(this).next().slideUp();
-	}
-	else {
-		$(this).addClass('active');
-		$(this).next().slideDown(); 
-	}
-});
-$('.nav__list a').click(function() {
-	var nav_item = $(this).text();
-	$('.nav__title').removeClass('active');
-	$('.nav__drop').slideUp();
-	$('.nav__title span').html(nav_item + '<i></i>');
-	return false;
-});
-//nav select
+//lang select
 $('.lang__list span').click(function() {
-	if ($(this).parent().hasClass('open')) {}
+	if ($(this).parent().hasClass('open')) {
+		$(this).parent().removeClass('open');
+		$(this).next().slideUp();		
+	}
 	else {$(this).parent().addClass('open').children('ul').slideDown();}
 });
 $('.lang__list li').click(function() {
