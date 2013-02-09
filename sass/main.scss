@@ -4,11 +4,12 @@
 .cover {
 	position: relative;
 	li {
-		float: left;
-		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 0 0;
+		@include respond-to(step3) {
+			background-position: 100% 0;
+		}
 	}	
 }
 .cover__video {

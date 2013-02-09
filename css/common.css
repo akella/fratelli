@@ -73,6 +73,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav { position: absolute; top: 0; left: 0; width: 100%; }
 @media only screen and (max-width: 960px) { .nav { background: #f9f6e6; } }
 
+.nav_normal .nav__drop { display: block !important; }
+
 @media only screen and (max-width: 960px) { .nav__drop { display: none; } }
 
 .nav__list { text-align: center; }
@@ -122,15 +124,21 @@ table { border-spacing: 0; border-collapse: collapse; }
 .lang { position: absolute; top: 0; left: 20px; height: 31px; font-family: 'Futuris', Arial, sans-serif; font-size: 11px; color: #c3c2b7; z-index: 10; }
 @media only screen and (max-width: 960px) { .lang { top: -51px; left: 5px; } }
 
+.lang_resize span, .lang_resize ul, .lang_resize li { float: left; }
+.lang_resize ul { display: block !important; }
+
 .lang__title { float: left; height: 31px; line-height: 31px; }
 @media only screen and (max-width: 960px) { .lang__title { display: none; } }
 
 .lang__list { float: left; padding: 10px 0 0 10px; margin-left: -5px; }
-.lang__list span { position: relative; display: block; padding: 0 10px 10px 0; text-decoration: underline; text-align: left; cursor: pointer; }
+.lang__list span { position: relative; display: block; padding: 0 10px 10px 0; text-decoration: underline; text-align: left; cursor: pointer; text-align: center; }
 .lang__list span:after { content: ''; position: absolute; top: 3px; right: 0; background: url('../img/icons-s4f62a9c2fd.png') 0 -1562px no-repeat; width: 5px; height: 4px; }
 .lang__list span.open:after { background: url('../img/icons-s4f62a9c2fd.png') 0 -1576px no-repeat; width: 5px; height: 4px; }
+@media only screen and (max-width: 960px) { .lang__list span { padding: 0 5px 10px 0; }
+  .lang__list span:after { display: none; } }
 .lang__list ul { display: none; }
-.lang__list li { margin-bottom: 10px; text-align: left; cursor: pointer; }
+.lang__list li { margin-bottom: 10px; padding-right: 10px; text-align: left; cursor: pointer; text-align: center; }
+@media only screen and (max-width: 960px) { .lang__list li { padding: 0 5px 0 0; } }
 .lang__list.open { background: #e3dbb2; color: #4b412c; border: 1px solid #4b412c; }
 .lang__list.open span { text-decoration: none; }
 .lang__list.open span:hover { text-decoration: underline; }

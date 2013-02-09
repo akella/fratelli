@@ -231,6 +231,11 @@ table {
 		background: $light;
 	}
 }
+.nav_normal {
+	.nav__drop {
+		display: block !important;
+	}
+}
 .nav__drop {
 	@include respond-to(step1) {
 		display: none;
@@ -356,6 +361,14 @@ table {
 		left: 5px;
 	}
 }
+.lang_resize {
+	span, ul, li {
+		float: left;	
+	}
+	ul {
+		display: block !important;
+	}
+}
 .lang__title {
 	float: left;
 	height: 31px;
@@ -375,6 +388,7 @@ table {
 		text-decoration: underline;
 		text-align: left;
 		cursor: pointer;
+		text-align: center;
 		&:after {
 			content: '';
 			position: absolute;
@@ -387,14 +401,25 @@ table {
 				@include sized-sprite($icons, arr1);
 			}
 		}
+		@include respond-to(step1) {
+			padding: 0 5px 10px 0;
+			&:after {
+				display: none;
+			}
+		}
 	}
 	ul {
 		display: none;
 	}
 	li {
 		margin-bottom: 10px;
+		padding-right: 10px;
 		text-align: left;
 		cursor: pointer;
+		text-align: center;
+		@include respond-to(step1) {
+			padding: 0 5px 0 0;
+		}
 	}
 	&.open {
 		background: $yellow;

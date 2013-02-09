@@ -1,7 +1,8 @@
 @font-face { font-family: 'Futuris'; src: url("../fonts/Futuris-Cyrillic.woff"); }
 
 .cover { position: relative; }
-.cover li { float: left; position: relative; background-size: cover; background-repeat: no-repeat; background-position: 0 0; }
+.cover li { background-size: cover; background-repeat: no-repeat; background-position: 0 0; }
+@media only screen and (max-width: 480px) { .cover li { background-position: 100% 0; } }
 
 .cover__video { position: absolute; left: 100px; bottom: 70px; border: 2px solid #fff; -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px; z-index: 10; }
 .cover__video img { display: block; }

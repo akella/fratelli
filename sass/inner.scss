@@ -32,14 +32,21 @@
 		.hr {
 			margin-top: 20px;
 		}
+		&:hover {
+			img {
+				@include box-shadow(rgba(0,0,0,0.4) 0 4px 14px);
+			}
+			.news__desc {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }
 .news__pic { 
 	img {
 		display: block;
-		&:hover {
-			@include box-shadow(rgba(0,0,0,0.4) 0 4px 14px);
-		}
 	}
 }
 .news__cat {
@@ -102,15 +109,10 @@
 }
 //tabs
 .tabs {
-	padding-top: 50px;		
+	padding-top: 50px;	
 	@include respond-to(step1) {
-		padding-top: 0px;
-	}
-	.hr {
-		@include respond-to(step1) {
-			display: none;
-		}
-	}
+		padding-top: 7px;
+	}	
 }
 .tabs__menu {
 	padding-bottom: 7px;
@@ -132,16 +134,13 @@
 			cursor: default;
 		}
 	}
-	@include respond-to(step1) {
-		display: none;
-	}
 }
 .tabs__nav {
 	padding: 15px 0 50px 0;
 	overflow: hidden;	
 	@include respond-to(step1) {
-		display: none;
-	}
+		padding: 15px 0;
+	}	
 }
 .tabs__prev, .tabs__next {
 	position: relative;
@@ -266,60 +265,52 @@
 	height: 387px;
 	margin: 15px 0;
 	overflow: hidden;
-  color: #000;
+  	color: #000;
 	.h2 {
 		margin: 25px 0 20px 0;
 		&:first-child {
 			margin: 0 0 20px 0;
 		}
-  }
-  p {
-  	margin-bottom: 5px;
-  	font-size: 13px;
-  	line-height: 1.3;
-  }
-  @include respond-to(step1) {
-  	width: auto;
-  	height: auto;
-  }
+  	}
+  	p {
+  		margin-bottom: 5px;
+  		font-size: 13px;
+  		line-height: 1.3;
+  	}
+  	@include respond-to(step1) {
+  		//width: auto; 
+		//margin: 10px;
+	}
 }
 .tabs__inner {
-	width: 50000px;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 50000em;
 	.columns {
+		position: relative;
+		left: 0;
 		float: left;
 		height: 387px;
+		padding-right: 20px;
 		@include respond-to(step1) {
-			float: none;
-			height: auto;
-			-webkit-column-width: auto;
-				 -moz-column-width: auto;
-			 			  column-width: auto;
-		}
-	}
-	.columns_1 {
-		width: 2430px;
-		@include respond-to(step1) {
-			width: auto;
-			img {
-				float: left;
-				margin-right: 10px;
-			}
-		}
-	}
-	.columns_2 {
-		width: 2186px;
-		@include respond-to(step1) {
-			width: auto;
-			img {
-				float: left;
-				margin-right: 10px;
-			}
+		// -webkit-columns-width: 100px;
+		//    -moz-columns-width: 100px;
+		// 	       columns-width: 100px;			
+		//	-webkit-column-count: 2;
+		//	   -moz-column-count: 2;
+		//		    column-count: 2;
+		//	  -webkit-column-gap: 20px;
+		//	     -moz-column-gap: 20px;
+		//	          column-gap: 20px;
 		}
 	}
 	@include respond-to(step1) {
-		padding: 10px;
-		width: auto !important;
+		
 	}
+}
+.columns__anchor {
+	
 }
 .tabs__feedback {
 	float: left;
@@ -367,12 +358,9 @@
 }
 .tabs__pic {
 	float: left;
-	margin: 0 20px;
+	padding-right: 20px;
 	@include respond-to(step1) {
-		float: none;
-		margin: 10px 0;
-		overflow: hidden;
-		text-align: center;
+		
 	}
 }
 .tabs__btn {
@@ -670,8 +658,10 @@
 		text-transform: uppercase;
 	}
 	img {
-		display: block;
-		@include box-shadow(rgba(0,0,0,0.2) 0 2px 5px);
+		display: block;		
+		&:hover {
+			@include box-shadow(rgba(0,0,0,0.2) 0 2px 5px);
+		}
 	}
 }
 .article__video {
@@ -721,6 +711,9 @@
 			margin-top: -2px;
 			border-top: 3px solid #494033;
 			@include box-shadow(rgba(0,0,0,0.2) 0 -1px 15px, rgba(0,0,0,0.2) 0 -1px 4px);
+			.related__title {
+				text-decoration: underline;
+			}
 		}
 		@include respond-to(step1) {
 			float: none;
@@ -729,6 +722,9 @@
 			vertical-align: top;
 		}
 	}
+	img {
+		display: block;
+	}
 }
 .related__date {
 	padding-top: 2px;
@@ -736,22 +732,13 @@
 	font-size: 12px;
 	color: $gray;
 	text-transform: uppercase;
-	a {
-		color: $gray;
-	}
-}
-.related__pic {
-	img {
-		display: block;
-	}
 }
 .related__title {
+	display: block;
 	padding: 6px 0;
-	a {
-		font-size: 18px;
-		text-transform: uppercase;
-		color: #000;
-	}	
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #000;
 }
 .related__desc {
 	width: 300px;
@@ -1067,6 +1054,12 @@
 		@include sized-sprite($icons, logo-b);
 		@extend %hide-text;
 	}
+	@include respond-to(step1) {
+		height: 70px;
+		a {
+			@include sized-sprite($icons, logo);
+		}
+	}
 }
 .sitemap__list {
 	padding-top: 20px;
@@ -1096,6 +1089,20 @@
 			}			
 		}
 	}	
+	@include respond-to(step1) {
+		margin: 0;
+		padding-top: 10px;
+		ul {
+			float: none;
+			width: auto;
+			margin: 0;
+		}
+		li {
+			width: auto;
+			height: auto;
+			margin-bottom: 0;
+		}
+	}
 }
 .sitemap__item {
 	position: absolute;
@@ -1113,11 +1120,48 @@
 		font-size: 12px;
 		color: $light;
 	}
+	b {
+		position: relative;
+		font-weight: normal;
+	}
 	&:hover {		
 		@include box-shadow(rgba(0,0,0,0.5) 0 0 10px);
 		span {
 			color: #000;
 			background: $light;
+		}
+	}
+	@include respond-to(step1) {		
+		position: relative;
+		top: 0;
+		left: 0;
+		border: 0;
+		&:hover {
+			@include box-shadow(none);
+		}
+		img {
+			display: none;
+		}		
+		span {
+			&:hover {
+				color: $light;
+				background: none;
+			}
+		}
+		b {
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				top: 5px;				
+			}
+			&:before {
+				left: -20px;
+				@include sized-sprite($icons, ico1);
+			}
+			&:after {
+				right: -20px;
+				@include sized-sprite($icons, ico2);
+			}
 		}
 	}
 }
