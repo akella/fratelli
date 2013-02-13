@@ -270,6 +270,9 @@
 	margin: 15px 0;
 	overflow: hidden;
   color: #000;
+  @include respond-to(step1) {
+  	overflow: auto;
+  }
 	.h2 {
 		margin: 25px 0 20px 0;
 		&:first-child {
