@@ -378,13 +378,13 @@ table {
 	}
 }
 .lang__list {
+	position: relative;
 	float: left;	
-	padding: 10px 0 0 10px;
-	margin-left: -5px;
+	padding: 10px 0 0 5px;
 	span {
 		position: relative;
 		display: block;
-		padding: 0 10px 10px 0;
+		padding: 0 10px 0 0;
 		text-decoration: underline;
 		text-align: left;
 		cursor: pointer;
@@ -395,11 +395,6 @@ table {
 			top: 3px;
 			right: 0;
 			@include sized-sprite($icons, arr);
-		}
-		&.open {
-			&:after {
-				@include sized-sprite($icons, arr1);
-			}
 		}
 		@include respond-to(step1) {
 			padding: 0 5px 10px 0;
@@ -412,8 +407,7 @@ table {
 		display: none;
 	}
 	li {
-		margin-bottom: 10px;
-		padding-right: 10px;
+		margin-bottom: 10px;		
 		text-align: left;
 		cursor: pointer;
 		text-align: center;
@@ -422,23 +416,28 @@ table {
 		}
 	}
 	&.open {
-		background: $yellow;
-		color: $brown;
-		border: 1px solid $brown;
-		span {
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-			&:after {
-				display: none;
-			}
-		}
+		ul {
+			position: absolute;
+			top: -1px;
+			left: -7px;
+			padding: 10px 10px 0 10px;
+			background: $yellow;
+			color: $brown;
+			border: 1px solid $brown;	
+		}		
 		li {
 			&:hover {
 				text-decoration: underline;
 			}
 		}
+	}
+}
+.lang_resize {
+	.active {
+		text-decoration: underline;
+	}
+	span {
+		display: none;
 	}
 }
 //footer
